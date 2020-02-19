@@ -1,0 +1,112 @@
+-- Integrity package declaration
+create or replace package IntegrityPackage AS
+ procedure InitNestLevel;
+ function GetNestLevel return number;
+ procedure NextNestLevel;
+ procedure PreviousNestLevel;
+ end IntegrityPackage;
+/
+
+-- Integrity package definition
+create or replace package body IntegrityPackage AS
+ NestLevel number;
+
+-- Procedure to initialize the trigger nest level
+ procedure InitNestLevel is
+ begin
+ NestLevel := 0;
+ end;
+
+
+-- Function to return the trigger nest level
+ function GetNestLevel return number is
+ begin
+ if NestLevel is null then
+     NestLevel := 0;
+ end if;
+ return(NestLevel);
+ end;
+
+-- Procedure to increase the trigger nest level
+ procedure NextNestLevel is
+ begin
+ if NestLevel is null then
+     NestLevel := 0;
+ end if;
+ NestLevel := NestLevel + 1;
+ end;
+
+-- Procedure to decrease the trigger nest level
+ procedure PreviousNestLevel is
+ begin
+ NestLevel := NestLevel - 1;
+ end;
+
+ end IntegrityPackage;
+/
+
+CREATE SEQUENCE APLICACION_SEQ INCREMENT BY 1 
+    START WITH 1 MAXVALUE 1.0E28 MINVALUE 1 NOCYCLE 
+    CACHE 20 NOORDER;
+/
+create trigger APLICACION_TRIGGER 
+BEFORE INSERT ON "APLICACION" 
+FOR EACH ROW
+begin select APLICACION_SEQ.nextval into :new.ID_APLICACION from dual;
+end;
+/
+
+CREATE SEQUENCE "ICARGO"."ESTACION_SEQ" INCREMENT BY 1 
+    START WITH 1 MAXVALUE 1.0E28 MINVALUE 1 NOCYCLE 
+    CACHE 20 NOORDER;
+/
+create trigger "ICARGO"."ESTACION_TRIGGER" 
+BEFORE INSERT ON "ESTACION" 
+FOR EACH ROW
+begin select ESTACION_SEQ.nextval into :new.EST_ID from dual;
+end;
+/
+
+CREATE SEQUENCE IMPDESCARGO_SEQ INCREMENT BY 1 
+    START WITH 1 MAXVALUE 1.0E28 MINVALUE 1 NOCYCLE 
+    CACHE 20 NOORDER;
+/
+create trigger IMPDESCARGO_TRIGGER 
+BEFORE INSERT ON "IMPDESCARGO" 
+FOR EACH ROW
+begin select IMPDESCARGO_SEQ.nextval into :new.IDC_ID from dual;
+end;
+/
+
+CREATE SEQUENCE MANIFIESTO_EMBARQUE_SEQ INCREMENT BY 1 
+    START WITH 1 MAXVALUE 1.0E28 MINVALUE 1 NOCYCLE 
+    CACHE 20 NOORDER;
+/
+create trigger MANIFIESTO_EMBARQUE_TRIGGER 
+BEFORE INSERT ON "MANIFIESTO_EMBARQUE" 
+FOR EACH ROW
+begin select MANIFIESTO_EMBARQUE_SEQ.nextval into :new.MANEMB_ID from dual;
+end;
+/
+
+CREATE SEQUENCE REPORTE_VENTA_SEQ INCREMENT BY 1 
+    START WITH 1 MAXVALUE 1.0E28 MINVALUE 1 NOCYCLE 
+    CACHE 20 NOORDER;
+/
+create trigger REPORTE_VENTA_TRIGGER 
+BEFORE INSERT ON "REPORTE_VENTA" 
+FOR EACH ROW
+begin select REPORTE_VENTA_SEQ.nextval into :new.REPVEN_ID from dual;
+end;
+/
+
+CREATE SEQUENCE SUBAPLICACION_SEQ INCREMENT BY 1 
+    START WITH 1 MAXVALUE 1.0E28 MINVALUE 1 NOCYCLE 
+    CACHE 20 NOORDER;
+/
+create trigger SUBAPLICACION_TRIGGER 
+BEFORE INSERT ON "SUBAPLICACION" 
+FOR EACH ROW
+begin select SUBAPLICACION_SEQ.nextval into :new.ID_SUBAPLICACION from dual;
+end;
+/

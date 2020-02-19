@@ -1,0 +1,513 @@
+<HTML><HEAD><TITLE>.:: Sistema de Carga ::.</TITLE><LINK href="includes/style/bluish.css" type=text/css rel=stylesheet>
+<SCRIPT language=JavaScript type=text/javascript><!--
+function toggle(object) {
+  var Event = window.event || arguments.callee.caller.arguments[0];
+
+  if (document.getElementById) {
+    if (document.getElementById(object).style.visibility == 'visible')
+      document.getElementById(object).style.visibility = 'hidden';
+    else {
+      document.getElementById(object).style.left = Event.x+15;
+      document.getElementById(object).style.top  = Event.y-20;
+      document.getElementById(object).style.visibility = 'visible';
+      }
+  }
+
+  else if (document.layers && document.layers[object] != null) {
+    if (document.layers[object].visibility == 'visible' ||
+     document.layers[object].visibility == 'show' )
+      document.layers[object].visibility = 'hidden';
+    else {
+      document.layers[object].left = Event.x+15;
+      document.layers[object].top  = Event.y-20;
+      document.layers[object].visibility = 'visible';
+      }
+  }
+
+  else if (document.all) {
+    if (document.all[object].style.visibility == 'visible')
+      document.all[object].style.visibility = 'hidden';
+    else {
+      document.all[object].style.pixelLeft = document.body.scrollLeft + Event.x + 1;
+      document.all[object].style.pixelTop = document.body.scrollTop + Event.y + 1;
+      document.all[object].style.visibility = 'visible';
+      }
+  }
+
+  return false;
+}
+//--></SCRIPT>
+
+<SCRIPT language=JavaScript src="js/overlib.js"></SCRIPT>
+
+<SCRIPT language=JavaScript src="js/donothing.js"></SCRIPT>
+
+<SCRIPT language=JavaScript src="js/confirm.js"></SCRIPT>
+
+<SCRIPT language=JavaScript src="js/date-picker.js"></SCRIPT>
+
+<SCRIPT language=JavaScript src="js/valida_ci.js"></SCRIPT>
+
+<SCRIPT language=JavaScript>
+        <!--
+                // handleEnter allows forms to 'tab' to the next field when the enter key is pushed, instead of submitting
+	function handleEnter (field, event) {
+		var keyCode = event.keyCode ? event.keyCode : event.which ? event.which : event.charCode;
+		if (keyCode == 13) {
+			var i;
+			for (i = 0; i < field.form.elements.length; i++)
+				if (field == field.form.elements[i])
+					break;
+			i = (i + 1) % field.form.elements.length;
+			field.form.elements[i].focus();
+			return false;
+		} 
+		else
+		return true;
+	}                //-->
+        </SCRIPT>
+
+<SCRIPT language=JavaScript>
+        <!--
+                                function highlightField (field,select) {
+                var i;
+                for (i = 0; i < field.form.elements.length; i++)
+                        if (field == field.form.elements[i])
+                                break;
+//                if (NS4) {
+//                        field.form.elements[i].bgColor = '#E7EEF5';
+//                } else {
+                        field.form.elements[i].style.backgroundColor = '#E7EEF5';
+//                }
+                if (select&&field.form.elements[i].type=="text") field.form.elements[i].select();
+        }
+
+
+        function normalField (field) {
+                var i;
+                for (i = 0; i < field.form.elements.length; i++)
+                        if (field == field.form.elements[i])
+                                break;
+//                if (NS4) {
+//                        field.form.elements[i].bgColor = '#FFFFFF';
+//                } else {
+                        field.form.elements[i].style.backgroundColor = '#FFFFFF';
+//                }
+
+        }
+
+        function highlightFieldFirst () {
+                var i;
+				var oele;
+                i = 0;
+				if (document.forms.length == 0) return;
+
+					// get a shortcut to the elements array
+					oele = document.forms[0].elements;
+
+					// find the first non hidden field
+					for (i=0; i < oele.length; i++) {
+                        if (oele[i].type!="hidden")  break;
+					}
+					// if all the fields were hidden return
+	  				if (i == oele.length) return;
+
+                    if (oele[i].type=="text") oele[i].select();
+                    oele[i].focus();
+                    if (oele[i].type=="text"||oele[i].type=="select"||oele[i].type=="textarea") highlightField(oele[i], '1');
+        }                //-->
+        </SCRIPT>
+
+<SCRIPT language=Javascript1.1>
+            function imgchange(imgName,imgSrc) {
+                if (document.images) {
+                    document.images[imgName].src = imgSrc;
+                }
+            }
+            function imgchange2(imgName, imgSrc) {
+                if (document.images) {
+                    document[imgName].src = eval(imgSrc + ".src");
+                }
+            }
+        </SCRIPT>
+
+<SCRIPT language=Javascript>
+function cambiar_action(forma,url_destino)
+{	
+    forma.action=url_destino;	
+}
+
+function chequear_cedula()
+{
+
+}
+
+function busca_combo(group,valor)
+{
+  //alert(valor);
+  var tarreglo=group.length;
+  var aux=0;
+  var flag=0;//bandera
+  
+  var tvalor=valor.length;
+  
+  var i;
+  var vindice;
+  var vtexto;
+  var vvalor;
+  var cad;
+  
+  //alert(tvalor);
+  if (tvalor>0)//buscar 1ra ocurrencia
+  {
+    i=0;
+  	while((i<tarreglo)&&(!flag))
+  	//for (i=0;i<group.length;i++)  
+    {
+  	  vtexto=group[i].text;
+  	  vvalor=group[i].value;
+  	  vindice=i;
+  	  cad="vtexto:" + vtexto + " vvalor:" + vvalor + " vindice:" + vindice;
+  	  //alert(cad);
+  	  
+  	  
+  	  if(vtexto.substr(0,tvalor)==valor)
+  	  {
+  	  	flag=1;
+  	  }  
+  	    i=i+1;
+    }
+  }
+  if(flag==1)
+    group.options[vindice].selected=true;
+  //else
+    //group.options[0].selected=true;
+  //alert(vindice);    
+}
+
+//busca el separador decimal cargado en el browser
+function jsSeparador()
+{
+  var resultado;
+  var res;
+  resultado=eval(1/2);
+  res=new String(resultado);
+  res=res.substring(1,2);    
+  return(res);
+}
+
+//sustituye en una cadena cad, "busca" por "por" 
+function jsSustituir(cad,busca,por)
+{
+  var i;  
+  var aux,recu;
+  
+  if(busca==por)
+  {
+  	return(cad);
+  }
+  else
+  {
+    aux=""; 
+    for(i=0;i<cad.length;i++)
+    {
+	  if(cad.charAt(i)==busca)
+	  {
+	    recu=por;
+	  }  
+	  else
+	  {
+	    recu=cad.charAt(i);  
+	  }
+	  aux=aux.concat(recu); 
+    }
+    return(aux);
+  }
+}
+
+</SCRIPT>
+<LINK href="estilos.css" type=text/css rel=stylesheet>
+<SCRIPT language=JavaScript src="js/validation.js"></SCRIPT>
+
+<SCRIPT language=JavaScript>var formissent = 0;function onlyOneSubmit() {if (!formissent) {formissent = 1; return true; } else { return false; }}</SCRIPT>
+
+<SCRIPT language=JavaScript>
+function hideRow(rowid) { document.getElementById(rowid).style.display = "none"; }
+var iFrameIndex = new Number(0);
+//var iFrameId = new Array("notifyZero","notifyOne","notifyTwo","notifyThree","notifyFour","notifyFive","notifySix");
+//var shimHTML = new String('<IMG SRC="/s360v2/spacer.gif" WIDTH=10 HEIGHT=10>');
+function setNotification()
+{
+var iFrameId = new String("notify");
+var args = setNotification.arguments;
+if (args.length < 2) return false;
+iFrameId += iFrameIndex;
+iFrameIndex < 7 ? iFrameIndex++ : iFrameIndex=0;
+iFrameURL = new String("s360.exe?");
+for (i=0; i<args.length; i+=2)
+{
+	iFrameURL += args[i] + "=" + args[i+1] + "&";
+}
+//alert(iFrameURL);
+//alert(iFrameId);
+eval("var cf = window.frames."+iFrameId);
+cf.location.replace(iFrameURL);
+}
+</SCRIPT>
+
+<SCRIPT language=JavaScript>function helpWindow() { window.open('s360.exe?page=PersonalTopPageHelp','Help','width=680,height=500,resizable=1,scrollbars=1,toolbar=0,menubar=0,location=0');}</SCRIPT>
+<!--
+pv
+-->
+<SCRIPT language=JavaScript>
+function fOpenWindow(vurl,vtitle,vwidth,vheight) 
+{
+ var cad;
+ cad='width=' + vwidth + ',height=' + vheight + ',resizable=1,scrollbars=1,toolbar=0,menubar=0,location=0';
+ //alert (vurl);
+ //alert (vtitle);
+ //alert (cad);
+ window.open(vurl,vtitle,cad);
+}
+</SCRIPT>
+<!--
+pv
+-->
+<SCRIPT language=Javascript>
+function over( style ) { style.borderLeftColor="#FFFFFF"; style.borderTopColor="#FFFFFF"; style.borderRightColor="#333333"; style.borderBottomColor="#333333"; }
+function mout( style ) { style.borderColor="#90A8C8" }
+function tout( style ) { style.borderColor="#94ACC8" }
+function overborder( style, clr ) {style.borderColor=clr }
+function moutborder( style, clr ) {style.borderColor=clr }
+function showstatus( lbl ) { status = lbl; return true; }
+function hidestatus() {status = ""; }
+</SCRIPT>
+
+<SCRIPT language=JavaScript>
+function showFullContents(dobj)
+{
+var dwidth = parseInt(dobj.style.width) * 1.5;
+var dheight = parseInt(dobj.style.height) * 1.5;
+dobj.style.zIndex = 90;
+if (dheight < 200) dobj.style.height = dheight;
+if (dwidth < 200) dobj.style.width = dwidth;
+dobj.style.clip = "rect(auto,"+dwidth+"px,"+dheight+"px,auto)";
+}
+function hideFullContents(dobj,dheight,dwidth,dzindex)
+{
+dobj.style.zIndex = dzindex;
+dobj.style.height = dheight;
+dobj.style.width = dwidth;
+dobj.style.clip = "rect(auto,"+dwidth+"px,"+dheight+"px,auto)";
+}
+
+</SCRIPT>
+
+<SCRIPT language=JavaScript>
+var chk = 1
+function checkAll(fmnm,cbnm)
+{
+var cb = document.forms[fmnm].elements[cbnm];
+	if (cb && cb.value) 
+	{
+		cb.checked = chk ? 1 : 0;
+		highlightRow(cb.value,cb.checked);
+	}
+	else if (cb)
+	{
+		for (i=0;i<cb.length;i++)
+		{
+			cb[i].checked = chk ? 1 : 0;
+			highlightRow(cb[i].value,cb[i].checked);
+		}
+	}
+	chk = (chk) ? 0 : 1;
+}
+function highlightRow(rid,chk)
+{
+var tr = document.getElementById(eval("'tr"+rid+"'"));
+	if (chk && tr)
+	{
+		tr.style.backgroundColor = "#90A8C8";
+	}
+	else if (tr)
+	{
+		tr.style.backgroundColor = "";
+	
+	}
+}
+
+</SCRIPT>
+</HEAD>
+<BODY class="" leftMargin=0 topMargin=0 onload=valida();highlightFieldFirst() marginheight="0" marginwidth="0">
+<DIV id=overDiv style="Z-INDEX: 1000; VISIBILITY: hidden; POSITION: absolute"></DIV>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+<TBODY>
+<TR>
+<TD vAlign=top><!-- startprint -->
+<TABLE cellSpacing=1 cellPadding=0 width="100%" bgColor=#075685 border=0>
+<TBODY>
+<TR>
+<TD vAlign=center align=middle width="10%" bgColor=#ffffff rowSpan=2><IMG src="images/logo.gif" border=0></TD>
+<TD bgColor=#075685>
+<TABLE cellSpacing=0 cellPadding=1 width="100%" border=0>
+<TBODY>
+<TR>
+<TD></TD>
+<TD><SPAN class=LoginName>Administrador&nbsp;&nbsp;&nbsp;&nbsp;Última Actualización a :&nbsp;2006-08-29 23:38:31</SPAN></TD>
+<TD><SELECT class=topSelector onchange=i=this.selectedIndex;v=this.options[i].value;if(v)location.href=v; name=Start> <OPTION value="" selected>Ir a ...<OPTION value="">----</OPTION><OPTION value=admin.php?id_aplicacion=1>Stock</OPTION> <OPTION value=admin.php?id_aplicacion=2>Ventas</OPTION> <OPTION value=admin.php?id_aplicacion=3>Embarque y Desembarque</OPTION> <OPTION value=admin.php?id_aplicacion=4>Usuarios</OPTION> <OPTION value=admin.php?id_aplicacion=5>Módulos</OPTION> <OPTION value=admin.php?id_aplicacion=6>Administración</OPTION> <OPTION value=admin.php?id_aplicacion=7>Reportes</OPTION></SELECT></TD>
+<FORM name=logoutform action=logout.php method=post>
+<TD vAlign=center><SPAN class=ButtonTop onmouseover="overborder(this.style,'#90A8C8')" style="BORDER-LEFT-COLOR: #075685; BORDER-BOTTOM-COLOR: #075685; BORDER-TOP-COLOR: #075685; BORDER-RIGHT-COLOR: #075685" onclick="document.forms['logoutform'].submit()" onmouseout="moutborder(this.style,'#075685')">Salir</SPAN> &nbsp; &nbsp; <SPAN class=ButtonTop onmouseover="overborder(this.style, '#90A8C8')" style="BORDER-LEFT-COLOR: #075685; BORDER-BOTTOM-COLOR: #075685; BORDER-TOP-COLOR: #075685; BORDER-RIGHT-COLOR: #075685" onclick="fOpenWindow('change_password.php','Change_Password','370','160')" onmouseout="moutborder(this.style, '#075685')">Cambiar Contraseña</SPAN> &nbsp; &nbsp; <SPAN class=ButtonTop onmouseover="overborder(this.style, '#90A8C8')" onclick=helpWindow() onmouseout="moutborder(this.style, '#075685')"></SPAN></TD></FORM></TR></TBODY></TABLE></TD></TR>
+<TR>
+<TD vAlign=top bgColor=#90a8c8 height=30><NOBR><SPAN class=menu onmouseover="over(this.style);showstatus('Stock');" onclick="location.href='admin.php?id_aplicacion=1'" onmouseout=mout(this.style);hidestatus();><IMG src="images/360/reuse.gif" align=absMiddle border=0>&nbsp;Stock </SPAN></NOBR><NOBR><SPAN class=menu onmouseover="over(this.style);showstatus('Ventas');" onclick="location.href='admin.php?id_aplicacion=2'" onmouseout=mout(this.style);hidestatus();><IMG src="images/360/project_s.gif" align=absMiddle border=0>&nbsp;Ventas </SPAN></NOBR><NOBR><SPAN class=menu onmouseover="over(this.style);showstatus('Embarque y Desembarque');" onclick="location.href='admin.php?id_aplicacion=3'" onmouseout=mout(this.style);hidestatus();><IMG src="images/360/refresh.gif" align=absMiddle border=0>&nbsp;Embarque y Desembarque </SPAN></NOBR><NOBR><SPAN class=menu onmouseover="over(this.style);showstatus('Usuarios');" onclick="location.href='admin.php?id_aplicacion=4'" onmouseout=mout(this.style);hidestatus();><IMG src="images/360/group.gif" align=absMiddle border=0>&nbsp;Usuarios </SPAN></NOBR><NOBR><SPAN class=menu onmouseover="over(this.style);showstatus('Módulos');" onclick="location.href='admin.php?id_aplicacion=5'" onmouseout=mout(this.style);hidestatus();><IMG src="images/360/department.gif" align=absMiddle border=0>&nbsp;Módulos </SPAN></NOBR><NOBR><SPAN class=menu onmouseover="over(this.style);showstatus('Administración');" style="BORDER-LEFT-COLOR: #90a8c8; BORDER-BOTTOM-COLOR: #90a8c8; BORDER-TOP-COLOR: #90a8c8; BORDER-RIGHT-COLOR: #90a8c8" onclick="location.href='admin.php?id_aplicacion=6'" onmouseout=mout(this.style);hidestatus();><IMG src="images/360/admintools.gif" align=absMiddle border=0>&nbsp;Administración </SPAN></NOBR><NOBR><SPAN class=menu onmouseover="over(this.style);showstatus('Reportes');" style="BORDER-LEFT-COLOR: #90a8c8; BORDER-BOTTOM-COLOR: #90a8c8; BORDER-TOP-COLOR: #90a8c8; BORDER-RIGHT-COLOR: #90a8c8" onclick="location.href='admin.php?id_aplicacion=7'" onmouseout=mout(this.style);hidestatus();><IMG src="images/360/report.gif" align=absMiddle border=0>&nbsp;Reportes </SPAN></NOBR></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0>
+<TBODY>
+<TR>
+<TD vAlign=bottom width="1%">
+<TABLE class=tabselected cellSpacing=0 cellPadding=3>
+<TBODY>
+<TR>
+<TD noWrap><A class=tabtxtselected onmouseover="status='Crear Manifiesto de Embarque';return true;" onmouseout="status='';" href="embarque.php?id_aplicacion=3&amp;id_subaplicacion=4"><IMG hspace=2 src="images/360/workflowconfirm.gif" align=absMiddle border=0>Crear Manifiesto de Embarque </A></TD></TR></TBODY></TABLE></TD>
+<TD vAlign=bottom width="1%">
+<TABLE class=tab cellSpacing=0 cellPadding=3>
+<TBODY>
+<TR>
+<TD noWrap><A class=tabtxt onmouseover="status='Ver Manifiesto de Embarque';return true;" onmouseout="status='';" href="vembarque.php?id_aplicacion=3&amp;id_subaplicacion=13"><IMG hspace=2 src="images/360/workflowconfirm.gif" align=absMiddle border=0>Ver Manifiesto de Embarque </A></TD></TR></TBODY></TABLE></TD>
+<TD vAlign=bottom width="1%">
+<TABLE class=tab cellSpacing=0 cellPadding=3>
+<TBODY>
+<TR>
+<TD noWrap><A class=tabtxt onmouseover="status='Crear Manifiesto de Desembarque';return true;" onmouseout="status='';" href="desembarque.php?id_aplicacion=3&amp;id_subaplicacion=14"><IMG hspace=2 src="images/360/workflowconfirm.gif" align=absMiddle border=0>Crear Manifiesto de Desembarque </A></TD></TR></TBODY></TABLE></TD>
+<TD vAlign=bottom width="1%">
+<TABLE class=tab cellSpacing=0 cellPadding=3>
+<TBODY>
+<TR>
+<TD noWrap><A class=tabtxt onmouseover="status='Ver Manifiesto de Desembarque';return true;" onmouseout="status='';" href="vdesembarque.php?id_aplicacion=3&amp;id_subaplicacion=15"><IMG hspace=2 src="images/360/workflowconfirm.gif" align=absMiddle border=0>Ver Manifiesto de Desembarque </A></TD></TR></TBODY></TABLE></TD>
+<TD vAlign=bottom width="96%">
+<TABLE class=empty cellSpacing=0 cellPadding=3 width="100%">
+<TBODY>
+<TR>
+<TD noWrap><IMG height=20 src="images/360/spacer.gif" width=12><SPAN class=tabtxt>&nbsp;</SPAN> </TD></TR></TBODY></TABLE>
+<TD></TD></TR></TBODY></TABLE>
+<SCRIPT language=JavaScript>function printWindow() { window.open("printpage.php?page=http://localhost/cargaIcaro/embarque_upd.php~id_aplicacion=3|id_subaplicacion=4|principal=embarque.php|id=41","Print","width=580,height=400,resizable=1,scrollbars=1,toolbar=0,menubar=0,location=0");}</SCRIPT>
+
+<TABLE class=workarea cellSpacing=0 cellPadding=3 width="100%" border=0>
+<TBODY>
+<TR>
+<TD><!--                        
+                        <a href="#" onclick="printWindow()">Vista de Impresión</a><a href="printpage.php">otro Print Preview</a>
+                        --><A href="admin.php?id_aplicacion=3">Embarque y Desembarque</A>&nbsp;&nbsp;---&gt;&nbsp;&nbsp;<A href="embarque.php?id_aplicacion=3&amp;id_subaplicacion=4">Crear Manifiesto de Embarque</A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A onclick=printWindow() href="#">Vista de Impresión</A> 
+<HR class=HRule color=#000000 noShade SIZE=1>
+
+<TABLE width="100%">
+<TBODY>
+<TR>
+<TD>
+<SCRIPT language=javascript>
+	function valida()
+	{
+  	  define('tNro', 'string', 'Nro.',1,15,document);
+  	  define('tVuelo', 'string', 'Vuelo',1,20,document);
+  	  define('tFecha', 'date', 'Fecha',10,10,document);
+  	  define('sePor', 'string', 'Por',1,15,document);
+  	  define('seOrigen', 'string', 'Origen',1,7,document);
+  	  define('seDestino', 'string', 'Destino',1,7,document);
+  	}
+  	
+  	function vValidar()
+  	{
+  	  var res;
+  	  res=validate();
+  	  return(res);
+  	}
+  	
+  	function vValidarB(forma,urldestino)
+  	{
+  	  var res;
+  	  res=validate();
+  	  if(res) 
+  	  {
+  	    cambiar_action(forma,urldestino);
+  	    forma.submit();
+  	  }  	  
+  	}
+  	
+  	</SCRIPT>
+
+<FORM name=form1 action=embarque_upd1.php method=post>
+<table border="0" width="100%">
+  <tr>
+    <td width="58%">
+<TABLE class=homebox cellSpacing=0 cellPadding=0 width="100%">
+<TBODY>
+<TR>
+<TD>
+<TABLE class=titletable cellSpacing=0 cellPadding=0 width="100%" border=0>
+<TBODY>
+<TR>
+<TD noWrap><SPAN class=title style="CURSOR: default"><IMG hspace=2 src="images/360/personwrite.gif" align=absMiddle border=0><FONT color=#ffffff> Actualizar Manifiesto&nbsp;</FONT></SPAN> </TD></TR></TBODY></TABLE>
+<TABLE class=tableinside cellSpacing=0 cellPadding=0 width="100%">
+<TBODY>
+<TR>
+<TD>
+<TABLE cellSpacing=1 cellPadding=2 width="100%" bgColor=#cccccc border=0>
+<TBODY>
+<TR bgColor=#cccccc>
+<TD class=table_hd noWrap>* Nro</TD>
+<TD class=table_hd noWrap><INPUT value=2 name=tNro></TD></TR>
+<TR bgColor=#cccccc>
+<TD class=table_hd noWrap>* Vuelo</TD>
+<TD class=table_hd noWrap><INPUT value=3 name=tVuelo></TD></TR>
+<TR bgColor=#cccccc>
+<TD class=table_hd noWrap>* Fecha</TD>
+<TD class=table_hd noWrap><INPUT value=2006-07-04 name=tFecha><A onmouseover="window.status='Date Picker';return true;" href="javascript:show_calendar('form1.tFecha');"> <IMG height=24 src="images/360/big_calendar.gif" width=24 border=0></A></TD></TR>
+<TR bgColor=#cccccc>
+<TD class=table_hd noWrap>* Por</TD>
+<TD class=table_hd noWrap><SELECT name=sePor><OPTION value=administrador>Administrador</OPTION><OPTION value=usuario1 selected>Usuario 1</OPTION><OPTION value=usuario2>Usuario 2</OPTION><OPTION value=usuario3>Usuario 3</OPTION><OPTION value=usuario4>Usuario 4</OPTION></SELECT></TD></TR>
+<TR bgColor=#cccccc>
+<TD class=table_hd noWrap>* Origen</TD>
+<TD class=table_hd noWrap><SELECT name=seOrigen><OPTION value=CUE>Cuenca</OPTION><OPTION value=GYE>GUAYAQUIL</OPTION><OPTION value=UIO selected>QUITO</OPTION></SELECT></TD></TR>
+<TR bgColor=#cccccc>
+<TD class=table_hd noWrap>* Destino</TD>
+<TD class=table_hd noWrap><SELECT name=seDestino><OPTION value=CUE>Cuenca</OPTION><OPTION value=GYE selected>GUAYAQUIL</OPTION><OPTION value=UIO>QUITO</OPTION></SELECT></TD></TR></TBODY></TABLE></TR></TBODY></TABLE></TR></TBODY></TABLE>	
+	</td>
+	<td width="42%">
+	<table border="0">
+	  <tr>
+	    <td>
+		  <div align="center">
+		    <input onClick="fOpenWindow('bulxmanemb.php?id_aplicacion=3&amp;id_subaplicacion=4&amp;principal=embarque.php&amp;idp=41','BulxManE','450','550')" type=button value="::::: Bultos por Manifiesto :::::" name=bulto>
+		    </div></td>
+	  </tr>
+	  	  <tr>
+	    <td>
+		  <div align="center">
+		    <input onClick="fOpenWindow('docxmanemb.php?id_aplicacion=3&amp;id_subaplicacion=4&amp;principal=embarque.php&amp;idp=41','DocxManEmb','450','550')" type=button value="Documentos por Manifiesto" name=doc>
+		    </div></td>
+	  </tr>
+	  	  <tr>
+	    <td>
+		  <div align="center">
+		    <input onClick="fOpenWindow('bulxmanembqueda.php?id_aplicacion=3&amp;id_subaplicacion=4&amp;principal=embarque.php&amp;idp=41','BulxManE','450','550')" type=button value=" Bajar Bultos de Manifiesto" name=bultoBaja>
+		    </div></td>
+	  </tr>
+	  	  <tr>
+	    <td>
+		  <div align="center">
+		    <input onClick="self.location='bulxmanembreal.php?id_aplicacion=3&amp;id_subaplicacion=4&amp;principal=embarque.php&amp;idp=41'" type=button value="Finalizar Manifiesto" name=bultoFin>
+		    </div></td>
+	  </tr>
+	</table>
+	  
+	  
+	  
+	  
+	
+	</td>
+  </tr>
+</table>
+<!-- -->
+<INPUT type=hidden value=3 name=id_aplicacion> <INPUT type=hidden value=4 name=id_subaplicacion> <INPUT type=hidden value=41 name=id> <INPUT type=hidden value=embarque.php name=principal> <INPUT type=hidden value=tNro|tVuelo|tFecha|sePor|seOrigen|seDestino name=campo_base><INPUT type=hidden value=id_aplicacion|id_subaplicacion|id|principal name=campo_extra> <INPUT onclick="return vValidar();" type=submit value=Actualizar name=Upd>  
+ <BR>
+   <!--<input type="button" name="AddB" value="A&ntilde;adirB" onClick="return vValidarB(document.form1,'embarque_upd1.php');">-->
+   <INPUT onclick="self.location='embarque.php?id_aplicacion=3&amp;id_subaplicacion=4'" type=button value=Regresar name=Cancel> </FORM></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BODY></HTML>

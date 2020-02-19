@@ -1,0 +1,50 @@
+<HEAD>
+
+<script language="JavaScript" src="scripts/validation.js"></script>
+
+</HEAD>
+
+<!-- STEP FOUR: Insert the onLoad event handler into your BODY tag  -->
+
+<BODY OnLoad="init()">
+
+<!-- STEP FIVE: Add validate() to your submit button, as shown below -->
+
+<center>
+<table><tr><td>
+<form name=testForm>
+apple:<br><input type=text name=field1 size=16> Required<br>
+peach:<br><input type=text name=field2 size=16> Required - minimum 4 characters<br>
+cherry:<br><input type=text name=field3 size=16> Required - maximum 8 characters<br>
+melon:<br><input type=text name=field4 size=16> Required - minimum 4 characters - maximum 8 characters<br>
+banana:<br><input type=text name=field5 size=16> Required - Must be a numeric character<br>
+grape:<br><input type=text name=field6 size=16> Required - Must be a numeric character - minimum 3 digits<br>
+carot:<br><input type=text name=field7 size=16> Required - Must be a numeric character - maximum 6 digits<br>
+sugar:<br><input type=text name=field8 size=16> Required - Must be a numeric character - minimum 4 digits - maximum 6 digits<br>
+fruit:<br><input type=text name=field9 size=16> Required - Valid e-mail<br>
+candy:<br><input type=text name=field10 size=16> Not required<br>
+<br>
+<input type=submit name=submit onClick="validate();return returnVal;" value="Test fields">
+</form>
+</td></tr></table>
+</center>
+
+<p><center>
+<font face="arial, helvetica" SIZE="-2">Free JavaScripts provided<br>
+by <a href="http://javascriptsource.com">The JavaScript Source</a></font>
+</center><p>
+<SCRIPT LANGUAGE="JavaScript">
+function init() {
+define('field1', 'string', 'Apple');
+define('field2', 'string', 'Peach', 4);
+define('field3', 'string', 'Cherry', null, 8);
+define('field4', 'string', 'Melon', 4, 8);
+define('field5', 'num', 'Banana');
+define('field6', 'num', 'Grape', 3);
+define('field7', 'num', 'Carot', null, 6);
+define('field8', 'num', 'Sugar', 4, 6);
+define('field9', 'email', 'Fruit');
+}
+//  End -->
+</script>
+<!-- Script Size:  6.75 KB -->

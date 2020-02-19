@@ -1,0 +1,12 @@
+CODBAR
+O
+N
+q272
+Q191,24+0
+S3
+D8
+ZT
+B16,32,0,1,1,1,87,B,"@codigo"
+A73,8,0,4,1,1,N,"@empresa"
+A81,157,0,4,1,1,N,"@origendestino"
+P1

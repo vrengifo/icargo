@@ -1,0 +1,15919 @@
+/BEGIN_TABLE AMCHEAD
+NAME A30
+VERS A8
+USER A30
+/BEGIN_DATA AMCHEAD
+PowerDesigner/PDM
+6.1.3
+
+/END_TABLE AMCHEAD
+
+/BEGIN_TABLE AMCMODL
+@       N5
+OID     N10
+MODL    N10
+NAME    A80
+CODE    A80
+LABL    A254
+DESC    TXT
+NOTE    TXT
+OPTS    TXT
+EXOP    TXT
+DBMS    A256
+FILE    A256
+HEAD    TXT
+FOOT    TXT
+POID    N10
+PNAM    A80
+PCOD    A80
+USER    A80
+VERS    A8
+CDAT    N12
+MDAT    N12
+EDAT    N12
+PART    N1
+ACCS    N5
+CUST    TXT
+/BEGIN_DATA AMCMODL
+3
+3
+3
+Icargo
+ICARGO
+
+
+
+
+
+ORACLE Version 8
+oracle8.def
+
+
+0
+Icargo
+ICARGO
+VHRP
+
+1134004906
+1134005090
+0
+0
+0
+
+/END_TABLE AMCMODL
+
+/BEGIN_TABLE AMCDOMN
+@       N5
+OID     N10
+DOMN    N10
+NAME    A80
+CODE    A80
+DESC    TXT
+NOTE    TXT
+LABL    A254
+DTTP    A30
+MLEN    N8
+PREC    N2
+IDNT    N1
+WDEF    N1
+MAND    N1
+UNIT    A8
+FRMT    A20
+LVAL    A20
+HVAL    A20
+DVAL    A30
+UPPR    N1
+LOWR    N1
+NMDF    N1
+VALS    TXT
+CRUL    TXT
+GRUL    TXT
+SOID    N10
+ATYP    N10
+PROF    N10
+ROPR    N1
+/BEGIN_DATA AMCDOMN
+/END_TABLE AMCDOMN
+
+/BEGIN_TABLE AMCUSER
+@       N5
+OID     N10
+USER    N10
+NAME    A80
+CODE    A80
+LABL    A254
+DESC    TXT
+NOTE    TXT
+/BEGIN_DATA AMCUSER
+1
+2
+2
+ICARGO
+ICARGO
+
+
+
+/END_TABLE AMCUSER
+
+/BEGIN_TABLE AMCTABL
+@       N5
+OID     N10
+TABL    N10
+MODL    N10
+NAME    A80
+CODE    A80
+LABL    A254
+DESC    TXT
+NOTE    TXT
+NBRC    N24,0
+SOID    N10
+TOBJ    N5
+COBJ    A80
+OPTS    TXT
+PKOP    TXT
+CRUL    TXT
+SRUL    TXT
+PKCN    A30
+CKCN    A30
+HEAD    TXT
+FOOT    TXT
+NGEN    N1
+OWNR    N10
+ATYP    N10
+TSTD    N8
+ROPR    N1
+/BEGIN_DATA AMCTABL
+1
+3
+3
+3
+AGENCIA
+AGENCIA
+
+
+
+0
+0
+0
+
+pctfree 10\
+pctused 40\
+initrans 1\
+maxtrans 255\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+freelist groups 1\
+buffer_pool \
+)\
+tablespace ICARGO\
+<partition clause> 
+
+
+
+PK_AGENCIA
+
+
+
+0
+2
+0
+0
+0
+1
+15
+15
+3
+APLICACION
+APLICACION
+
+
+
+0
+0
+0
+
+pctfree 10\
+pctused 40\
+initrans 1\
+maxtrans 255\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+freelist groups 1\
+buffer_pool \
+)\
+tablespace ICARGO\
+<partition clause> 
+
+
+
+PK_APLICACION
+
+
+
+0
+2
+0
+0
+0
+1
+22
+22
+3
+AVION
+AVION
+
+
+
+0
+0
+0
+
+pctfree 10\
+pctused 40\
+initrans 1\
+maxtrans 255\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+freelist groups 1\
+buffer_pool \
+)\
+tablespace ICARGO\
+<partition clause> 
+
+
+
+PK_AVION
+
+
+
+0
+2
+0
+0
+0
+1
+29
+29
+3
+CIUDAD
+CIUDAD
+
+
+
+0
+0
+0
+
+pctfree 10\
+pctused 40\
+initrans 1\
+maxtrans 255\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+freelist groups 1\
+buffer_pool \
+)\
+tablespace ICARGO\
+<partition clause> 
+
+
+
+PK_CIUDAD
+
+
+
+0
+2
+0
+0
+0
+1
+40
+40
+3
+CLIENTE
+CLIENTE
+
+
+
+0
+0
+0
+
+pctfree 10\
+pctused 40\
+initrans 1\
+maxtrans 255\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+freelist groups 1\
+buffer_pool \
+)\
+tablespace ICARGO\
+<partition clause> 
+
+
+
+PK_CLIENTE
+
+
+
+0
+2
+0
+0
+0
+1
+53
+53
+3
+ENTREGADO_EN
+ENTREGADO_EN
+
+
+
+0
+0
+0
+
+pctfree 10\
+pctused 40\
+initrans 1\
+maxtrans 255\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+freelist groups 1\
+buffer_pool \
+)\
+tablespace ICARGO\
+<partition clause> 
+
+
+
+PK_ENTREGADO_EN
+
+
+
+0
+2
+0
+0
+0
+1
+58
+58
+3
+EQUIPO
+EQUIPO
+
+
+
+0
+0
+0
+
+pctfree 10\
+pctused 40\
+initrans 1\
+maxtrans 255\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+freelist groups 1\
+buffer_pool \
+)\
+tablespace ICARGO\
+<partition clause> 
+
+
+
+PK_EQUIPO
+
+
+
+0
+2
+0
+0
+0
+1
+68
+68
+3
+ESTACION
+ESTACION
+
+
+
+0
+0
+0
+
+pctfree 10\
+pctused 40\
+initrans 1\
+maxtrans 255\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+freelist groups 1\
+buffer_pool \
+)\
+tablespace ICARGO\
+<partition clause> 
+
+
+
+PK_ESTACION
+
+
+
+0
+2
+0
+0
+0
+1
+86
+86
+3
+ESTADO_GUIA
+ESTADO_GUIA
+
+
+
+0
+0
+0
+
+pctfree 10\
+pctused 40\
+initrans 1\
+maxtrans 255\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+freelist groups 1\
+buffer_pool \
+)\
+tablespace ICARGO\
+<partition clause> 
+
+
+
+PK_ESTADO_GUIA
+
+
+
+0
+2
+0
+0
+0
+1
+91
+91
+3
+FORMA_PAGO
+FORMA_PAGO
+
+
+
+0
+0
+0
+
+pctfree 10\
+pctused 40\
+initrans 1\
+maxtrans 255\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+freelist groups 1\
+buffer_pool \
+)\
+tablespace ICARGO\
+<partition clause> 
+
+
+
+PK_FORMA_PAGO
+
+
+
+0
+2
+0
+0
+0
+1
+96
+96
+3
+FORMA_PAGOXGUIA
+FORMA_PAGOXGUIA
+
+
+
+0
+0
+0
+
+pctfree 10\
+pctused 40\
+initrans 1\
+maxtrans 255\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+freelist groups 1\
+buffer_pool \
+)\
+tablespace ICARGO\
+<partition clause> 
+
+
+
+
+
+
+
+0
+2
+0
+0
+0
+1
+104
+104
+3
+GUIA
+GUIA
+
+
+
+0
+0
+0
+
+pctfree 10\
+pctused 40\
+initrans 1\
+maxtrans 255\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+freelist groups 1\
+buffer_pool \
+)\
+tablespace ICARGO\
+<partition clause> 
+
+
+
+PK_GUIA
+
+
+
+0
+2
+0
+0
+0
+1
+171
+171
+3
+KILOEQUIVALENCIA
+KILOEQUIVALENCIA
+
+
+
+0
+0
+0
+
+pctfree 10\
+pctused 40\
+initrans 1\
+maxtrans 255\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+freelist groups 1\
+buffer_pool \
+)\
+tablespace ICARGO\
+<partition clause> 
+
+
+
+PK_KILOEQUIVALENCIA
+
+
+
+0
+2
+0
+0
+0
+1
+187
+187
+3
+MANDES_DETALLE
+MANDES_DETALLE
+
+
+
+0
+0
+0
+
+pctfree 10\
+pctused 40\
+initrans 1\
+maxtrans 255\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+freelist groups 1\
+buffer_pool \
+)\
+tablespace ICARGO\
+<partition clause> 
+
+
+
+PK_MANDES_DETALLE
+
+
+
+0
+2
+0
+0
+0
+1
+194
+194
+3
+MANEMB_DETALLE
+MANEMB_DETALLE
+
+
+
+0
+0
+0
+
+pctfree 10\
+pctused 40\
+initrans 1\
+maxtrans 255\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+freelist groups 1\
+buffer_pool \
+)\
+tablespace ICARGO\
+<partition clause> 
+
+
+
+PK_MANEMB_DETALLE
+
+
+
+0
+2
+0
+0
+0
+1
+200
+200
+3
+MANIFIESTO_DESEMBARQUE
+MANIFIESTO_DESEMBARQUE
+
+
+
+0
+0
+0
+
+pctfree 10\
+pctused 40\
+initrans 1\
+maxtrans 255\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+freelist groups 1\
+buffer_pool \
+)\
+tablespace ICARGO\
+<partition clause> 
+
+
+
+PK_MANIFIESTO_DESEMBARQUE
+
+
+
+0
+2
+0
+0
+0
+1
+207
+207
+3
+MANIFIESTO_EMBARQUE
+MANIFIESTO_EMBARQUE
+
+
+
+0
+0
+0
+
+pctfree 10\
+pctused 40\
+initrans 1\
+maxtrans 255\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+freelist groups 1\
+buffer_pool \
+)\
+tablespace ICARGO\
+<partition clause> 
+
+
+
+PK_MANIFIESTO_EMBARQUE
+
+
+
+0
+2
+0
+0
+0
+1
+217
+217
+3
+MONEDA
+MONEDA
+
+
+
+0
+0
+0
+
+pctfree 10\
+pctused 40\
+initrans 1\
+maxtrans 255\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+freelist groups 1\
+buffer_pool \
+)\
+tablespace ICARGO\
+<partition clause> 
+
+
+
+PK_MONEDA
+
+
+
+0
+2
+0
+0
+0
+1
+222
+222
+3
+PAIS
+PAIS
+
+
+
+0
+0
+0
+
+pctfree 10\
+pctused 40\
+initrans 1\
+maxtrans 255\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+freelist groups 1\
+buffer_pool \
+)\
+tablespace ICARGO\
+<partition clause> 
+
+
+
+PK_PAIS
+
+
+
+0
+2
+0
+0
+0
+1
+227
+227
+3
+REPORTE_VENTA
+REPORTE_VENTA
+
+
+
+0
+0
+0
+
+pctfree 10\
+pctused 40\
+initrans 1\
+maxtrans 255\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+freelist groups 1\
+buffer_pool \
+)\
+tablespace ICARGO\
+<partition clause> 
+
+
+
+PK_REPORTE_VENTA
+
+
+
+0
+2
+0
+0
+0
+1
+240
+240
+3
+STOCKXESTACION
+STOCKXESTACION
+
+
+
+0
+0
+0
+
+pctfree 10\
+pctused 40\
+initrans 1\
+maxtrans 255\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+freelist groups 1\
+buffer_pool \
+)\
+tablespace ICARGO\
+<partition clause> 
+
+
+
+PK_STOCKXESTACION
+
+
+
+0
+2
+0
+0
+0
+1
+249
+249
+3
+STOESTGUI
+STOESTGUI
+
+
+
+0
+0
+0
+
+pctfree 10\
+pctused 40\
+initrans 1\
+maxtrans 255\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+freelist groups 1\
+buffer_pool \
+)\
+tablespace ICARGO\
+<partition clause> 
+
+
+
+
+
+
+
+0
+2
+0
+0
+0
+1
+253
+253
+3
+STOESTGUI_HISTORIAL
+STOESTGUI_HISTORIAL
+
+
+
+0
+0
+0
+
+pctfree 10\
+pctused 40\
+initrans 1\
+maxtrans 255\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+freelist groups 1\
+buffer_pool \
+)\
+tablespace ICARGO\
+<partition clause> 
+
+
+
+
+
+
+
+0
+2
+0
+0
+0
+1
+258
+258
+3
+SUBAPLICACION
+SUBAPLICACION
+
+
+
+0
+0
+0
+
+pctfree 10\
+pctused 40\
+initrans 1\
+maxtrans 255\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+freelist groups 1\
+buffer_pool \
+)\
+tablespace ICARGO\
+<partition clause> 
+
+
+
+PK_SUBAPLICACION
+
+
+
+0
+2
+0
+0
+0
+1
+268
+268
+3
+TARJETA
+TARJETA
+
+
+
+0
+0
+0
+
+pctfree 10\
+pctused 40\
+initrans 1\
+maxtrans 255\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+freelist groups 1\
+buffer_pool \
+)\
+tablespace ICARGO\
+<partition clause> 
+
+
+
+PK_TARJETA
+
+
+
+0
+2
+0
+0
+0
+1
+273
+273
+3
+TIPOAGENCIA
+TIPOAGENCIA
+
+
+
+0
+0
+0
+
+pctfree 10\
+pctused 40\
+initrans 1\
+maxtrans 255\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+freelist groups 1\
+buffer_pool \
+)\
+tablespace ICARGO\
+<partition clause> 
+
+
+
+PK_TIPOAGENCIA
+
+
+
+0
+2
+0
+0
+0
+1
+278
+278
+3
+TIPOCAMBIO
+TIPOCAMBIO
+
+
+
+0
+0
+0
+
+pctfree 10\
+pctused 40\
+initrans 1\
+maxtrans 255\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+freelist groups 1\
+buffer_pool \
+)\
+tablespace ICARGO\
+<partition clause> 
+
+
+
+PK_TIPOCAMBIO
+
+
+
+0
+2
+0
+0
+0
+1
+290
+290
+3
+TIPO_GUIA
+TIPO_GUIA
+
+
+
+0
+0
+0
+
+pctfree 10\
+pctused 40\
+initrans 1\
+maxtrans 255\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+freelist groups 1\
+buffer_pool \
+)\
+tablespace ICARGO\
+<partition clause> 
+
+
+
+PK_TIPO_GUIA
+
+
+
+0
+2
+0
+0
+0
+1
+295
+295
+3
+TIPO_PRODUCTO
+TIPO_PRODUCTO
+
+
+
+0
+0
+0
+
+pctfree 10\
+pctused 40\
+initrans 1\
+maxtrans 255\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+freelist groups 1\
+buffer_pool \
+)\
+tablespace ICARGO\
+<partition clause> 
+
+
+
+PK_TIPO_PRODUCTO
+
+
+
+0
+2
+0
+0
+0
+1
+300
+300
+3
+TIPOVUELO
+TIPOVUELO
+
+
+
+0
+0
+0
+
+pctfree 10\
+pctused 40\
+initrans 1\
+maxtrans 255\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+freelist groups 1\
+buffer_pool \
+)\
+tablespace ICARGO\
+<partition clause> 
+
+
+
+PK_TIPOVUELO
+
+
+
+0
+2
+0
+0
+0
+1
+305
+305
+3
+USUARIO
+USUARIO
+
+
+
+0
+0
+0
+
+pctfree 10\
+pctused 40\
+initrans 1\
+maxtrans 255\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+freelist groups 1\
+buffer_pool \
+)\
+tablespace ICARGO\
+<partition clause> 
+
+
+
+PK_USUARIO
+
+
+
+0
+2
+0
+0
+0
+1
+317
+317
+3
+USUARIO_APLICACION
+USUARIO_APLICACION
+
+
+
+0
+0
+0
+
+pctfree 10\
+pctused 40\
+initrans 1\
+maxtrans 255\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+freelist groups 1\
+buffer_pool \
+)\
+tablespace ICARGO\
+<partition clause> 
+
+
+
+
+
+
+
+0
+2
+0
+0
+0
+1
+324
+324
+3
+VUELO
+VUELO
+
+
+
+0
+0
+0
+
+pctfree 10\
+pctused 40\
+initrans 1\
+maxtrans 255\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+freelist groups 1\
+buffer_pool \
+)\
+tablespace ICARGO\
+<partition clause> 
+
+
+
+PK_VUELO
+
+
+
+0
+2
+0
+0
+0
+1
+334
+334
+3
+VUELO_HISTORIAL
+VUELO_HISTORIAL
+
+
+
+0
+0
+0
+
+pctfree 10\
+pctused 40\
+initrans 1\
+maxtrans 255\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+freelist groups 1\
+buffer_pool \
+)\
+tablespace ICARGO\
+<partition clause> 
+
+
+
+PK_VUELO_HISTORIAL
+
+
+
+0
+2
+0
+0
+0
+/END_TABLE AMCTABL
+
+/BEGIN_TABLE AMCCOLN
+@       N5
+OID     N10
+COLN    N10
+NAME    A80
+CODE    A80
+LABL    A254
+DESC    TXT
+NOTE    TXT
+TABL    N10
+DOMN    N10
+DTTP    A30
+MLEN    N8
+PREC    N2
+IDNT    N1
+WDEF    N1
+UNIT    A8
+FRMT    A20
+LVAL    A20
+HVAL    A20
+DVAL    A30
+UPPR    N1
+LOWR    N1
+NMDF    N1
+VALS    TXT
+CRUL    TXT
+GRUL    TXT
+PRIM    N1
+FORN    N1
+MAND    N1
+DISP    N1
+SOID    N10
+TOBJ    N5
+COBJ    A80
+CKCN    A30
+NUMR    N8
+PROF    N10
+REDU    N8
+NULV    N5
+AVLN    N8
+ATYP    N10
+ROPR    N1
+/BEGIN_DATA AMCCOLN
+3
+4
+4
+AGE_CODIGO
+AGE_CODIGO
+
+
+
+3
+0
+CHAR(8)
+8
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+1
+0
+1
+1
+0
+0
+
+
+1
+0
+-100
+0
+0
+0
+0
+3
+5
+5
+TIPAGE_CODIGO
+TIPAGE_CODIGO
+
+
+
+3
+0
+CHAR(1)
+1
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+2
+0
+-100
+0
+0
+0
+0
+3
+6
+6
+EST_ID
+EST_ID
+
+
+
+3
+0
+NUMBER(20)
+20
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+3
+0
+-100
+0
+0
+0
+0
+3
+7
+7
+AGE_DESCRIPCION
+AGE_DESCRIPCION
+
+
+
+3
+0
+VARCHAR2(30)
+30
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+4
+0
+-100
+0
+0
+0
+0
+3
+8
+8
+AGE_PORCENTAJE_COMISION
+AGE_PORCENTAJE_COMISION
+
+
+
+3
+0
+NUMBER(2,4)
+2
+4
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+5
+0
+-100
+0
+0
+0
+0
+3
+16
+16
+ID_APLICACION
+ID_APLICACION
+
+
+
+15
+0
+NUMBER
+0
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+1
+0
+1
+1
+0
+0
+
+
+1
+0
+-100
+0
+0
+0
+0
+3
+17
+17
+NOMBRE_APLICACION
+NOMBRE_APLICACION
+
+
+
+15
+0
+VARCHAR2(100)
+100
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+2
+0
+-100
+0
+0
+0
+0
+3
+18
+18
+FILE_APLICACION
+FILE_APLICACION
+
+
+
+15
+0
+VARCHAR2(100)
+100
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+3
+0
+-100
+0
+0
+0
+0
+3
+19
+19
+IMAGEN_APLICACION
+IMAGEN_APLICACION
+
+
+
+15
+0
+VARCHAR2(100)
+100
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+4
+0
+-100
+0
+0
+0
+0
+3
+23
+23
+AVI_ID
+AVI_ID
+
+
+
+22
+0
+VARCHAR2(7)
+7
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+1
+0
+1
+1
+0
+0
+
+
+1
+0
+-100
+0
+0
+0
+0
+3
+24
+24
+AVI_MATRICULA
+AVI_MATRICULA
+
+
+
+22
+0
+VARCHAR2(7)
+7
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+2
+0
+-100
+0
+0
+0
+0
+3
+25
+25
+AVI_PESO_MAX
+AVI_PESO_MAX
+
+
+
+22
+0
+NUMBER(6,2)
+6
+2
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+3
+0
+-100
+0
+0
+0
+0
+3
+26
+26
+AVI_VOL_MAX
+AVI_VOL_MAX
+
+
+
+22
+0
+NUMBER(4)
+4
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+4
+0
+-100
+0
+0
+0
+0
+3
+30
+30
+CIU_CODIGO
+CIU_CODIGO
+
+
+
+29
+0
+CHAR(3)
+3
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+1
+0
+1
+1
+0
+0
+
+
+1
+0
+-100
+0
+0
+0
+0
+3
+31
+31
+PAI_CODIGO
+PAI_CODIGO
+
+
+
+29
+0
+CHAR(3)
+3
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+2
+0
+-100
+0
+0
+0
+0
+3
+32
+32
+EST_ID
+EST_ID
+
+
+
+29
+0
+NUMBER(20)
+20
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+3
+0
+-100
+0
+0
+0
+0
+3
+33
+33
+CIU_DESCRIPCION
+CIU_DESCRIPCION
+
+
+
+29
+0
+VARCHAR2(30)
+30
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+1
+1
+0
+0
+
+
+4
+0
+-100
+0
+0
+0
+0
+3
+41
+41
+CLI_CODIGO
+CLI_CODIGO
+
+
+
+40
+0
+VARCHAR2(20)
+20
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+1
+0
+1
+1
+0
+0
+
+
+1
+0
+-100
+0
+0
+0
+0
+3
+42
+42
+EST_ID
+EST_ID
+
+
+
+40
+0
+NUMBER(20)
+20
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+2
+0
+-100
+0
+0
+0
+0
+3
+43
+43
+CLI_DESCRIPCION
+CLI_DESCRIPCION
+
+
+
+40
+0
+VARCHAR2(30)
+30
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+1
+1
+0
+0
+
+
+3
+0
+-100
+0
+0
+0
+0
+3
+44
+44
+CLI_CONTACTO
+CLI_CONTACTO
+
+
+
+40
+0
+VARCHAR2(100)
+100
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+1
+1
+0
+0
+
+
+4
+0
+-100
+0
+0
+0
+0
+3
+45
+45
+CLI_DIRECCION
+CLI_DIRECCION
+
+
+
+40
+0
+VARCHAR2(100)
+100
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+5
+0
+-100
+0
+0
+0
+0
+3
+46
+46
+CLI_TELEFONO
+CLI_TELEFONO
+
+
+
+40
+0
+VARCHAR2(25)
+25
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+1
+1
+0
+0
+
+
+6
+0
+-100
+0
+0
+0
+0
+3
+47
+47
+CLI_FAX
+CLI_FAX
+
+
+
+40
+0
+VARCHAR2(25)
+25
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+7
+0
+-100
+0
+0
+0
+0
+3
+48
+48
+CLI_EMAIL
+CLI_EMAIL
+
+
+
+40
+0
+VARCHAR2(100)
+100
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+8
+0
+-100
+0
+0
+0
+0
+3
+54
+54
+ENT_ID
+ENT_ID
+
+
+
+53
+0
+CHAR(2)
+2
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+1
+0
+1
+1
+0
+0
+
+
+1
+0
+-100
+0
+0
+0
+0
+3
+55
+55
+ENT_DESCRIPCION
+ENT_DESCRIPCION
+
+
+
+53
+0
+VARCHAR2(20)
+20
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+2
+0
+-100
+0
+0
+0
+0
+3
+59
+59
+EQU_CODIGO
+EQU_CODIGO
+
+
+
+58
+0
+CHAR(5)
+5
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+1
+0
+1
+1
+0
+0
+
+
+1
+0
+-100
+0
+0
+0
+0
+3
+60
+60
+EQU_DESCRIPCION
+EQU_DESCRIPCION
+
+
+
+58
+0
+VARCHAR2(30)
+30
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+2
+0
+-100
+0
+0
+0
+0
+3
+61
+61
+EQU_KILOS
+EQU_KILOS
+
+
+
+58
+0
+NUMBER(12,2)
+12
+2
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+3
+0
+-100
+0
+0
+0
+0
+3
+62
+62
+EQU_LIBRAS
+EQU_LIBRAS
+
+
+
+58
+0
+NUMBER(12,2)
+12
+2
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+4
+0
+-100
+0
+0
+0
+0
+3
+63
+63
+EQU_PAX_FC
+EQU_PAX_FC
+
+
+
+58
+0
+NUMBER
+0
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+5
+0
+-100
+0
+0
+0
+0
+3
+64
+64
+EQU_PAX_BC
+EQU_PAX_BC
+
+
+
+58
+0
+NUMBER
+0
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+6
+0
+-100
+0
+0
+0
+0
+3
+65
+65
+EQU_PAX_EC
+EQU_PAX_EC
+
+
+
+58
+0
+NUMBER
+0
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+7
+0
+-100
+0
+0
+0
+0
+3
+69
+69
+EST_ID
+EST_ID
+
+
+
+68
+0
+NUMBER(20)
+20
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+1
+0
+1
+1
+0
+0
+
+
+1
+0
+-100
+0
+0
+0
+0
+3
+70
+70
+CIU_CODIGO
+CIU_CODIGO
+
+
+
+68
+0
+CHAR(3)
+3
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+1
+1
+0
+0
+
+
+2
+0
+-100
+0
+0
+0
+0
+3
+71
+71
+EST_CODIGO
+EST_CODIGO
+
+
+
+68
+0
+VARCHAR2(7)
+7
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+1
+1
+0
+0
+
+
+3
+0
+-100
+0
+0
+0
+0
+3
+72
+72
+MON_CODIGO
+MON_CODIGO
+
+
+
+68
+0
+CHAR(3)
+3
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+4
+0
+-100
+0
+0
+0
+0
+3
+73
+73
+EST_NOMBRE
+EST_NOMBRE
+
+
+
+68
+0
+VARCHAR2(30)
+30
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+5
+0
+-100
+0
+0
+0
+0
+3
+74
+74
+EST_RUC
+EST_RUC
+
+
+
+68
+0
+VARCHAR2(13)
+13
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+6
+0
+-100
+0
+0
+0
+0
+3
+75
+75
+EST_AUTSRI
+EST_AUTSRI
+
+
+
+68
+0
+VARCHAR2(20)
+20
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+7
+0
+-100
+0
+0
+0
+0
+3
+76
+76
+EST_DIRECCION
+EST_DIRECCION
+
+
+
+68
+0
+VARCHAR2(250)
+250
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+8
+0
+-100
+0
+0
+0
+0
+3
+77
+77
+EST_TELEFONO
+EST_TELEFONO
+
+
+
+68
+0
+VARCHAR2(250)
+250
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+9
+0
+-100
+0
+0
+0
+0
+3
+78
+78
+EST_FAX
+EST_FAX
+
+
+
+68
+0
+VARCHAR2(100)
+100
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+10
+0
+-100
+0
+0
+0
+0
+3
+79
+79
+EST_MAIL
+EST_MAIL
+
+
+
+68
+0
+VARCHAR2(200)
+200
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+11
+0
+-100
+0
+0
+0
+0
+3
+87
+87
+ESTGUI_ID
+ESTGUI_ID
+
+
+
+86
+0
+VARCHAR2(4)
+4
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+1
+0
+1
+1
+0
+0
+
+
+1
+0
+-100
+0
+0
+0
+0
+3
+88
+88
+ESTGUI_DESCRIPCION
+ESTGUI_DESCRIPCION
+
+
+
+86
+0
+VARCHAR2(30)
+30
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+2
+0
+-100
+0
+0
+0
+0
+3
+92
+92
+FORPAG_ID
+FORPAG_ID
+
+
+
+91
+0
+VARCHAR2(5)
+5
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+1
+0
+1
+1
+0
+0
+
+
+1
+0
+-100
+0
+0
+0
+0
+3
+93
+93
+FORPAG_DESCRIPCION
+FORPAG_DESCRIPCION
+
+
+
+91
+0
+VARCHAR2(30)
+30
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+2
+0
+-100
+0
+0
+0
+0
+3
+97
+97
+FORPAG_ID
+FORPAG_ID
+
+
+
+96
+0
+VARCHAR2(5)
+5
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+1
+0
+-100
+0
+0
+0
+0
+3
+98
+98
+TAR_ID
+TAR_ID
+
+
+
+96
+0
+VARCHAR2(5)
+5
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+2
+0
+-100
+0
+0
+0
+0
+3
+99
+99
+FPG_FECHA
+FPG_FECHA
+
+
+
+96
+0
+DATE
+0
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+3
+0
+-100
+0
+0
+0
+0
+3
+100
+100
+GUI_ID
+GUI_ID
+
+
+
+96
+0
+NUMBER(20)
+20
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+4
+0
+-100
+0
+0
+0
+0
+3
+101
+101
+FPG_VALOR
+FPG_VALOR
+
+
+
+96
+0
+NUMBER(20,2)
+20
+2
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+5
+0
+-100
+0
+0
+0
+0
+3
+102
+102
+TARJETA_NRO
+TARJETA_NRO
+
+
+
+96
+0
+VARCHAR2(30)
+30
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+6
+0
+-100
+0
+0
+0
+0
+3
+103
+103
+TARJETA_NRO_DOCUMENTO
+TARJETA_NRO_DOCUMENTO
+
+
+
+96
+0
+VARCHAR2(20)
+20
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+7
+0
+-100
+0
+0
+0
+0
+3
+105
+105
+GUI_ID
+GUI_ID
+
+
+
+104
+0
+NUMBER(20)
+20
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+1
+0
+1
+1
+0
+0
+
+
+1
+0
+-100
+0
+0
+0
+0
+3
+106
+106
+GUI_NRO
+GUI_NRO
+
+
+
+104
+0
+VARCHAR2(10)
+10
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+1
+1
+0
+0
+
+
+2
+0
+-100
+0
+0
+0
+0
+3
+107
+107
+TIPGUI_ID
+TIPGUI_ID
+
+
+
+104
+0
+CHAR(2)
+2
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+3
+0
+-100
+0
+0
+0
+0
+3
+108
+108
+TIPRO_ID
+TIPRO_ID
+
+
+
+104
+0
+CHAR(3)
+3
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+4
+0
+-100
+0
+0
+0
+0
+3
+109
+109
+GUI_FECHA
+GUI_FECHA
+
+
+
+104
+0
+DATE
+0
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+5
+0
+-100
+0
+0
+0
+0
+3
+110
+110
+GUI_PIEZAS
+GUI_PIEZAS
+
+
+
+104
+0
+NUMBER(3)
+3
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+6
+0
+-100
+0
+0
+0
+0
+3
+111
+111
+GUI_PESO
+GUI_PESO
+
+
+
+104
+0
+NUMBER(4,2)
+4
+2
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+7
+0
+-100
+0
+0
+0
+0
+3
+112
+112
+GUI_VOLUMEN
+GUI_VOLUMEN
+
+
+
+104
+0
+NUMBER(3)
+3
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+8
+0
+-100
+0
+0
+0
+0
+3
+113
+113
+GUI_VDECLARADO
+GUI_VDECLARADO
+
+
+
+104
+0
+NUMBER(12,2)
+12
+2
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+9
+0
+-100
+0
+0
+0
+0
+3
+114
+114
+GUI_DESCRIPCION
+GUI_DESCRIPCION
+
+
+
+104
+0
+VARCHAR2(250)
+250
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+10
+0
+-100
+0
+0
+0
+0
+3
+115
+115
+GUI_CONDOCUMENTO
+GUI_CONDOCUMENTO
+
+
+
+104
+0
+CHAR(1)
+1
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+11
+0
+-100
+0
+0
+0
+0
+3
+116
+116
+GUI_OBSERVACION
+GUI_OBSERVACION
+
+
+
+104
+0
+VARCHAR2(250)
+250
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+12
+0
+-100
+0
+0
+0
+0
+3
+117
+117
+GUI_OBS_SINDINENIJOYA
+GUI_OBS_SINDINENIJOYA
+
+
+
+104
+0
+CHAR(1)
+1
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+13
+0
+-100
+0
+0
+0
+0
+3
+118
+118
+GUI_OBS_SUJETOESPACIO
+GUI_OBS_SUJETOESPACIO
+
+
+
+104
+0
+CHAR(1)
+1
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+14
+0
+-100
+0
+0
+0
+0
+3
+119
+119
+GUI_OBS_CUENTARIESGOREM
+GUI_OBS_CUENTARIESGOREM
+
+
+
+104
+0
+CHAR(1)
+1
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+15
+0
+-100
+0
+0
+0
+0
+3
+120
+120
+ENT_ID
+ENT_ID
+
+
+
+104
+0
+CHAR(2)
+2
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+16
+0
+-100
+0
+0
+0
+0
+3
+121
+121
+CLI_CODIGO
+CLI_CODIGO
+
+
+
+104
+0
+VARCHAR2(20)
+20
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+17
+0
+-100
+0
+0
+0
+0
+3
+122
+122
+REPVEN_ID
+REPVEN_ID
+
+
+
+104
+0
+NUMBER(20)
+20
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+18
+0
+-100
+0
+0
+0
+0
+3
+123
+123
+USU_CODIGO
+USU_CODIGO
+
+
+
+104
+0
+VARCHAR2(15)
+15
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+1
+1
+0
+0
+
+
+19
+0
+-100
+0
+0
+0
+0
+3
+124
+124
+EST_ORIGEN
+EST_ORIGEN
+
+
+
+104
+0
+NUMBER(20)
+20
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+20
+0
+-100
+0
+0
+0
+0
+3
+125
+125
+EST_DESTINO
+EST_DESTINO
+
+
+
+104
+0
+NUMBER(20)
+20
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+21
+0
+-100
+0
+0
+0
+0
+3
+126
+126
+GUI_REMITENTE
+GUI_REMITENTE
+
+
+
+104
+0
+VARCHAR2(30)
+30
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+22
+0
+-100
+0
+0
+0
+0
+3
+127
+127
+GUI_CED_REMITENTE
+GUI_CED_REMITENTE
+
+
+
+104
+0
+VARCHAR2(13)
+13
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+23
+0
+-100
+0
+0
+0
+0
+3
+128
+128
+GUI_DIR_REMITENTE
+GUI_DIR_REMITENTE
+
+
+
+104
+0
+VARCHAR2(60)
+60
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+24
+0
+-100
+0
+0
+0
+0
+3
+129
+129
+GUI_TELF_REMITENTE
+GUI_TELF_REMITENTE
+
+
+
+104
+0
+VARCHAR2(20)
+20
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+25
+0
+-100
+0
+0
+0
+0
+3
+130
+130
+GUI_DESTINATARIO
+GUI_DESTINATARIO
+
+
+
+104
+0
+VARCHAR2(30)
+30
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+26
+0
+-100
+0
+0
+0
+0
+3
+131
+131
+GUI_CED_DESTINATARIO
+GUI_CED_DESTINATARIO
+
+
+
+104
+0
+VARCHAR2(13)
+13
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+27
+0
+-100
+0
+0
+0
+0
+3
+132
+132
+GUI_DIR_DESTINATARIO
+GUI_DIR_DESTINATARIO
+
+
+
+104
+0
+VARCHAR2(60)
+60
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+28
+0
+-100
+0
+0
+0
+0
+3
+133
+133
+GUI_TELF_DESTINATARIO
+GUI_TELF_DESTINATARIO
+
+
+
+104
+0
+VARCHAR2(20)
+20
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+29
+0
+-100
+0
+0
+0
+0
+3
+134
+134
+GUI_FLETECARGA
+GUI_FLETECARGA
+
+
+
+104
+0
+NUMBER(10,2)
+10
+2
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+30
+0
+-100
+0
+0
+0
+0
+3
+135
+135
+GUI_ENTREGADOMICILIO
+GUI_ENTREGADOMICILIO
+
+
+
+104
+0
+NUMBER(10,2)
+10
+2
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+31
+0
+-100
+0
+0
+0
+0
+3
+136
+136
+GUI_TRANSADICIONAL
+GUI_TRANSADICIONAL
+
+
+
+104
+0
+NUMBER(10,2)
+10
+2
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+32
+0
+-100
+0
+0
+0
+0
+3
+137
+137
+GUI_SERVADICIONAL
+GUI_SERVADICIONAL
+
+
+
+104
+0
+NUMBER(10,2)
+10
+2
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+33
+0
+-100
+0
+0
+0
+0
+3
+138
+138
+GUI_CORRESPONDENCIA
+GUI_CORRESPONDENCIA
+
+
+
+104
+0
+NUMBER(10,2)
+10
+2
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+34
+0
+-100
+0
+0
+0
+0
+3
+139
+139
+GUI_SEGUROS
+GUI_SEGUROS
+
+
+
+104
+0
+NUMBER(10,2)
+10
+2
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+35
+0
+-100
+0
+0
+0
+0
+3
+140
+140
+GUI_EMBALAJE
+GUI_EMBALAJE
+
+
+
+104
+0
+NUMBER(10,2)
+10
+2
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+36
+0
+-100
+0
+0
+0
+0
+3
+141
+141
+GUI_SUBTOTAL
+GUI_SUBTOTAL
+
+
+
+104
+0
+NUMBER(12,2)
+12
+2
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+37
+0
+-100
+0
+0
+0
+0
+3
+142
+142
+GUI_DESCUENTO
+GUI_DESCUENTO
+
+
+
+104
+0
+NUMBER(12,2)
+12
+2
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+38
+0
+-100
+0
+0
+0
+0
+3
+143
+143
+GUI_IVA
+GUI_IVA
+
+
+
+104
+0
+NUMBER(12,2)
+12
+2
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+39
+0
+-100
+0
+0
+0
+0
+3
+144
+144
+GUI_TOTAL
+GUI_TOTAL
+
+
+
+104
+0
+NUMBER(14,2)
+14
+2
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+40
+0
+-100
+0
+0
+0
+0
+3
+145
+145
+GUI_UAUDIT
+GUI_UAUDIT
+
+
+
+104
+0
+VARCHAR2(15)
+15
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+41
+0
+-100
+0
+0
+0
+0
+3
+146
+146
+GUI_FAUDIT
+GUI_FAUDIT
+
+
+
+104
+0
+DATE
+0
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+42
+0
+-100
+0
+0
+0
+0
+3
+147
+147
+CIU_CODIGO
+CIU_CODIGO
+
+
+
+104
+0
+VARCHAR2(3)
+3
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+43
+0
+-100
+0
+0
+0
+0
+3
+148
+148
+GUI_SOBREPESO
+GUI_SOBREPESO
+
+
+
+104
+0
+CHAR(1)
+1
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+44
+0
+-100
+0
+0
+0
+0
+3
+149
+149
+MANEMB_ID
+MANEMB_ID
+
+
+
+104
+0
+NUMBER(30)
+30
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+45
+0
+-100
+0
+0
+0
+0
+3
+150
+150
+GUI_ENTREGADA
+GUI_ENTREGADA
+
+
+
+104
+0
+CHAR(1)
+1
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+46
+0
+-100
+0
+0
+0
+0
+3
+151
+151
+GUI_ENTREGADAPOR
+GUI_ENTREGADAPOR
+
+
+
+104
+0
+VARCHAR2(20)
+20
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+47
+0
+-100
+0
+0
+0
+0
+3
+152
+152
+GUI_FECHAENTREGA
+GUI_FECHAENTREGA
+
+
+
+104
+0
+DATE
+0
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+48
+0
+-100
+0
+0
+0
+0
+3
+172
+172
+CLI_CODIGO
+CLI_CODIGO
+
+
+
+171
+0
+VARCHAR2(20)
+20
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+1
+0
+1
+1
+0
+0
+
+
+1
+0
+-100
+0
+0
+0
+0
+3
+173
+173
+KILEQU_FECHA
+KILEQU_FECHA
+
+
+
+171
+0
+DATE
+0
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+1
+0
+1
+1
+0
+0
+
+
+2
+0
+-100
+0
+0
+0
+0
+3
+174
+174
+MON_CODIGO
+MON_CODIGO
+
+
+
+171
+0
+CHAR(3)
+3
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+3
+0
+-100
+0
+0
+0
+0
+3
+175
+175
+EST_ID
+EST_ID
+
+
+
+171
+0
+NUMBER(20)
+20
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+1
+0
+1
+1
+0
+0
+
+
+4
+0
+-100
+0
+0
+0
+0
+3
+176
+176
+KILEQU_DESDE
+KILEQU_DESDE
+
+
+
+171
+0
+NUMBER(12,2)
+12
+2
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+1
+1
+0
+0
+
+
+5
+0
+-100
+0
+0
+0
+0
+3
+177
+177
+KILEQU_HASTA
+KILEQU_HASTA
+
+
+
+171
+0
+NUMBER(12,2)
+12
+2
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+1
+1
+0
+0
+
+
+6
+0
+-100
+0
+0
+0
+0
+3
+178
+178
+KILEQU_PRECIO
+KILEQU_PRECIO
+
+
+
+171
+0
+NUMBER(12,2)
+12
+2
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+1
+1
+0
+0
+
+
+7
+0
+-100
+0
+0
+0
+0
+3
+188
+188
+MANDESDET_ID
+MANDESDET_ID
+
+
+
+187
+0
+NUMBER(30)
+30
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+1
+0
+1
+1
+0
+0
+
+
+1
+0
+-100
+0
+0
+0
+0
+3
+189
+189
+MANDES_ID
+MANDES_ID
+
+
+
+187
+0
+NUMBER(30)
+30
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+1
+0
+1
+0
+0
+
+
+2
+0
+-100
+0
+0
+0
+0
+3
+190
+190
+GUI_ID
+GUI_ID
+
+
+
+187
+0
+NUMBER(20)
+20
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+3
+0
+-100
+0
+0
+0
+0
+3
+191
+191
+MANDESDET_OK
+MANDESDET_OK
+
+
+
+187
+0
+CHAR(1)
+1
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+4
+0
+-100
+0
+0
+0
+0
+3
+195
+195
+MANEMBDET_ID
+MANEMBDET_ID
+
+
+
+194
+0
+NUMBER(30)
+30
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+1
+0
+1
+1
+0
+0
+
+
+1
+0
+-100
+0
+0
+0
+0
+3
+196
+196
+MANEMB_ID
+MANEMB_ID
+
+
+
+194
+0
+NUMBER(30)
+30
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+1
+0
+1
+0
+0
+
+
+2
+0
+-100
+0
+0
+0
+0
+3
+197
+197
+GUI_ID
+GUI_ID
+
+
+
+194
+0
+NUMBER(20)
+20
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+1
+0
+1
+0
+0
+
+
+3
+0
+-100
+0
+0
+0
+0
+3
+201
+201
+MANDES_ID
+MANDES_ID
+
+
+
+200
+0
+NUMBER(30)
+30
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+1
+0
+1
+1
+0
+0
+
+
+1
+0
+-100
+0
+0
+0
+0
+3
+202
+202
+MANEMB_ID
+MANEMB_ID
+
+
+
+200
+0
+NUMBER(30)
+30
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+1
+0
+1
+0
+0
+
+
+2
+0
+-100
+0
+0
+0
+0
+3
+203
+203
+MANDES_FECHAREC
+MANDES_FECHAREC
+
+
+
+200
+0
+DATE
+0
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+3
+0
+-100
+0
+0
+0
+0
+3
+204
+204
+MANDES_POR
+MANDES_POR
+
+
+
+200
+0
+VARCHAR2(20)
+20
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+4
+0
+-100
+0
+0
+0
+0
+3
+208
+208
+MANEMB_ID
+MANEMB_ID
+
+
+
+207
+0
+NUMBER(30)
+30
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+1
+0
+1
+1
+0
+0
+
+
+1
+0
+-100
+0
+0
+0
+0
+3
+209
+209
+VUEHIS_ID
+VUEHIS_ID
+
+
+
+207
+0
+NUMBER(30)
+30
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+1
+0
+1
+0
+0
+
+
+2
+0
+-100
+0
+0
+0
+0
+3
+210
+210
+MANEMB_NRO
+MANEMB_NRO
+
+
+
+207
+0
+VARCHAR2(15)
+15
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+3
+0
+-100
+0
+0
+0
+0
+3
+211
+211
+MANEMB_FECHA
+MANEMB_FECHA
+
+
+
+207
+0
+DATE
+0
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+4
+0
+-100
+0
+0
+0
+0
+3
+212
+212
+MANEMB_POR
+MANEMB_POR
+
+
+
+207
+0
+VARCHAR2(20)
+20
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+5
+0
+-100
+0
+0
+0
+0
+3
+213
+213
+MANEMB_ORIGEN
+MANEMB_ORIGEN
+
+
+
+207
+0
+CHAR(3)
+3
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+6
+0
+-100
+0
+0
+0
+0
+3
+214
+214
+MANEMB_DESTINO
+MANEMB_DESTINO
+
+
+
+207
+0
+CHAR(3)
+3
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+7
+0
+-100
+0
+0
+0
+0
+3
+218
+218
+MON_CODIGO
+MON_CODIGO
+
+
+
+217
+0
+CHAR(3)
+3
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+1
+0
+1
+1
+0
+0
+
+
+1
+0
+-100
+0
+0
+0
+0
+3
+219
+219
+MON_DESCRIPCION
+MON_DESCRIPCION
+
+
+
+217
+0
+VARCHAR2(30)
+30
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+1
+1
+0
+0
+
+
+2
+0
+-100
+0
+0
+0
+0
+3
+223
+223
+PAI_CODIGO
+PAI_CODIGO
+
+
+
+222
+0
+CHAR(3)
+3
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+1
+0
+1
+1
+0
+0
+
+
+1
+0
+-100
+0
+0
+0
+0
+3
+224
+224
+PAI_DESCRIPCION
+PAI_DESCRIPCION
+
+
+
+222
+0
+VARCHAR2(30)
+30
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+2
+0
+-100
+0
+0
+0
+0
+3
+228
+228
+REPVEN_ID
+REPVEN_ID
+
+
+
+227
+0
+NUMBER(20)
+20
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+1
+0
+1
+1
+0
+0
+
+
+1
+0
+-100
+0
+0
+0
+0
+3
+229
+229
+REPVEN_NRO
+REPVEN_NRO
+
+
+
+227
+0
+VARCHAR2(10)
+10
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+2
+0
+-100
+0
+0
+0
+0
+3
+230
+230
+REPVEN_FECHA
+REPVEN_FECHA
+
+
+
+227
+0
+DATE
+0
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+3
+0
+-100
+0
+0
+0
+0
+3
+231
+231
+REPVEN_POR
+REPVEN_POR
+
+
+
+227
+0
+VARCHAR2(15)
+15
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+4
+0
+-100
+0
+0
+0
+0
+3
+232
+232
+REPVEN_UAUDIT
+REPVEN_UAUDIT
+
+
+
+227
+0
+VARCHAR2(15)
+15
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+5
+0
+-100
+0
+0
+0
+0
+3
+233
+233
+REPVEN_FAUDIT
+REPVEN_FAUDIT
+
+
+
+227
+0
+DATE
+0
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+6
+0
+-100
+0
+0
+0
+0
+3
+234
+234
+REPVEN_TOTAL_CASH
+REPVEN_TOTAL_CASH
+
+
+
+227
+0
+NUMBER(14,2)
+14
+2
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+7
+0
+-100
+0
+0
+0
+0
+3
+235
+235
+REPVEN_TOTAL_COLLECT
+REPVEN_TOTAL_COLLECT
+
+
+
+227
+0
+NUMBER(14,2)
+14
+2
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+8
+0
+-100
+0
+0
+0
+0
+3
+236
+236
+REPVEN_TOTAL_CREDITO
+REPVEN_TOTAL_CREDITO
+
+
+
+227
+0
+NUMBER(14,2)
+14
+2
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+9
+0
+-100
+0
+0
+0
+0
+3
+237
+237
+REPVEN_TOTAL
+REPVEN_TOTAL
+
+
+
+227
+0
+NUMBER(15,2)
+15
+2
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+10
+0
+-100
+0
+0
+0
+0
+3
+241
+241
+EST_ID
+EST_ID
+
+
+
+240
+0
+NUMBER(20)
+20
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+1
+0
+1
+0
+0
+
+
+1
+0
+-100
+0
+0
+0
+0
+3
+242
+242
+STOEST_ID
+STOEST_ID
+
+
+
+240
+0
+NUMBER(20)
+20
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+1
+0
+1
+1
+0
+0
+
+
+2
+0
+-100
+0
+0
+0
+0
+3
+243
+243
+STOEST_FECHA
+STOEST_FECHA
+
+
+
+240
+0
+DATE
+0
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+3
+0
+-100
+0
+0
+0
+0
+3
+244
+244
+STOEST_VINI
+STOEST_VINI
+
+
+
+240
+0
+VARCHAR2(10)
+10
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+4
+0
+-100
+0
+0
+0
+0
+3
+245
+245
+STOEST_VFIN
+STOEST_VFIN
+
+
+
+240
+0
+VARCHAR2(10)
+10
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+5
+0
+-100
+0
+0
+0
+0
+3
+246
+246
+STOEST_UAUDIT
+STOEST_UAUDIT
+
+
+
+240
+0
+VARCHAR2(20)
+20
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+6
+0
+-100
+0
+0
+0
+0
+3
+250
+250
+ESTGUI_ID
+ESTGUI_ID
+
+
+
+249
+0
+VARCHAR2(4)
+4
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+1
+0
+1
+0
+0
+
+
+1
+0
+-100
+0
+0
+0
+0
+3
+251
+251
+STOEST_ID
+STOEST_ID
+
+
+
+249
+0
+NUMBER(20)
+20
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+1
+0
+1
+0
+0
+
+
+2
+0
+-100
+0
+0
+0
+0
+3
+252
+252
+SEG_NROGUIA
+SEG_NROGUIA
+
+
+
+249
+0
+VARCHAR2(10)
+10
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+3
+0
+-100
+0
+0
+0
+0
+3
+254
+254
+ESTGUI_ID
+ESTGUI_ID
+
+
+
+253
+0
+VARCHAR2(4)
+4
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+1
+0
+-100
+0
+0
+0
+0
+3
+255
+255
+STOEST_ID
+STOEST_ID
+
+
+
+253
+0
+NUMBER(20)
+20
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+2
+0
+-100
+0
+0
+0
+0
+3
+256
+256
+SEG_NROGUIA
+SEG_NROGUIA
+
+
+
+253
+0
+VARCHAR2(10)
+10
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+3
+0
+-100
+0
+0
+0
+0
+3
+257
+257
+SEG_FECHA
+SEG_FECHA
+
+
+
+253
+0
+DATE
+0
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+4
+0
+-100
+0
+0
+0
+0
+3
+259
+259
+ID_SUBAPLICACION
+ID_SUBAPLICACION
+
+
+
+258
+0
+NUMBER
+0
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+1
+0
+1
+1
+0
+0
+
+
+1
+0
+-100
+0
+0
+0
+0
+3
+260
+260
+ID_APLICACION
+ID_APLICACION
+
+
+
+258
+0
+NUMBER
+0
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+2
+0
+-100
+0
+0
+0
+0
+3
+261
+261
+NOMBRE_SUBAPLICACION
+NOMBRE_SUBAPLICACION
+
+
+
+258
+0
+VARCHAR2(100)
+100
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+3
+0
+-100
+0
+0
+0
+0
+3
+262
+262
+FILE_SUBAPLICACION
+FILE_SUBAPLICACION
+
+
+
+258
+0
+VARCHAR2(250)
+250
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+4
+0
+-100
+0
+0
+0
+0
+3
+263
+263
+IMAGEN_SUBAPLICACION
+IMAGEN_SUBAPLICACION
+
+
+
+258
+0
+VARCHAR2(250)
+250
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+5
+0
+-100
+0
+0
+0
+0
+3
+269
+269
+TAR_ID
+TAR_ID
+
+
+
+268
+0
+VARCHAR2(5)
+5
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+1
+0
+1
+1
+0
+0
+
+
+1
+0
+-100
+0
+0
+0
+0
+3
+270
+270
+TAR_DESCRIPCION
+TAR_DESCRIPCION
+
+
+
+268
+0
+VARCHAR2(20)
+20
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+2
+0
+-100
+0
+0
+0
+0
+3
+274
+274
+TIPAGE_CODIGO
+TIPAGE_CODIGO
+
+
+
+273
+0
+CHAR(1)
+1
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+1
+0
+1
+1
+0
+0
+
+
+1
+0
+-100
+0
+0
+0
+0
+3
+275
+275
+TIPAGE_DESCRIPCION
+TIPAGE_DESCRIPCION
+
+
+
+273
+0
+VARCHAR2(30)
+30
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+2
+0
+-100
+0
+0
+0
+0
+3
+279
+279
+TIPCAM_FECHA
+TIPCAM_FECHA
+
+
+
+278
+0
+DATE
+0
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+1
+0
+1
+1
+0
+0
+
+
+1
+0
+-100
+0
+0
+0
+0
+3
+280
+280
+MON_CODIGO
+MON_CODIGO
+
+
+
+278
+0
+CHAR(3)
+3
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+2
+0
+-100
+0
+0
+0
+0
+3
+281
+281
+EST_ID
+EST_ID
+
+
+
+278
+0
+NUMBER(20)
+20
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+1
+0
+1
+1
+0
+0
+
+
+3
+0
+-100
+0
+0
+0
+0
+3
+282
+282
+TIPCAM_VALOR
+TIPCAM_VALOR
+
+
+
+278
+0
+NUMBER(12,4)
+12
+4
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+4
+0
+-100
+0
+0
+0
+0
+3
+291
+291
+TIPGUI_ID
+TIPGUI_ID
+
+
+
+290
+0
+CHAR(2)
+2
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+1
+0
+1
+1
+0
+0
+
+
+1
+0
+-100
+0
+0
+0
+0
+3
+292
+292
+TIPGUI_DESCRIPCION
+TIPGUI_DESCRIPCION
+
+
+
+290
+0
+VARCHAR2(20)
+20
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+2
+0
+-100
+0
+0
+0
+0
+3
+296
+296
+TIPRO_ID
+TIPRO_ID
+
+
+
+295
+0
+CHAR(3)
+3
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+1
+0
+1
+1
+0
+0
+
+
+1
+0
+-100
+0
+0
+0
+0
+3
+297
+297
+TIPRO_DESCRIPCION
+TIPRO_DESCRIPCION
+
+
+
+295
+0
+VARCHAR2(20)
+20
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+1
+1
+0
+0
+
+
+2
+0
+-100
+0
+0
+0
+0
+3
+301
+301
+TIPVUE_CODIGO
+TIPVUE_CODIGO
+
+
+
+300
+0
+CHAR(1)
+1
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+1
+0
+1
+1
+0
+0
+
+
+1
+0
+-100
+0
+0
+0
+0
+3
+302
+302
+TIPVUE_DESCRIPCION
+TIPVUE_DESCRIPCION
+
+
+
+300
+0
+VARCHAR2(30)
+30
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+1
+1
+0
+0
+
+
+2
+0
+-100
+0
+0
+0
+0
+3
+306
+306
+USU_CODIGO
+USU_CODIGO
+
+
+
+305
+0
+VARCHAR2(15)
+15
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+1
+0
+1
+1
+0
+0
+
+
+1
+0
+-100
+0
+0
+0
+0
+3
+307
+307
+USU_USU_CODIGO
+USU_USU_CODIGO
+
+
+
+305
+0
+VARCHAR2(15)
+15
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+2
+0
+-100
+0
+0
+0
+0
+3
+308
+308
+EST_ID
+EST_ID
+
+
+
+305
+0
+NUMBER(20)
+20
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+3
+0
+-100
+0
+0
+0
+0
+3
+309
+309
+USU_CLAVE
+USU_CLAVE
+
+
+
+305
+0
+VARCHAR2(15)
+15
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+1
+1
+0
+0
+
+
+4
+0
+-100
+0
+0
+0
+0
+3
+310
+310
+USU_NOMBRE
+USU_NOMBRE
+
+
+
+305
+0
+VARCHAR2(100)
+100
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+5
+0
+-100
+0
+0
+0
+0
+3
+318
+318
+USU_CODIGO
+USU_CODIGO
+
+
+
+317
+0
+VARCHAR2(15)
+15
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+1
+0
+-100
+0
+0
+0
+0
+3
+319
+319
+ID_APLICACION
+ID_APLICACION
+
+
+
+317
+0
+NUMBER
+0
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+2
+0
+-100
+0
+0
+0
+0
+3
+325
+325
+VUE_CODIGO
+VUE_CODIGO
+
+
+
+324
+0
+CHAR(4)
+4
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+1
+0
+1
+1
+0
+0
+
+
+1
+0
+-100
+0
+0
+0
+0
+3
+326
+326
+TIPVUE_CODIGO
+TIPVUE_CODIGO
+
+
+
+324
+0
+CHAR(1)
+1
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+1
+0
+1
+0
+0
+
+
+2
+0
+-100
+0
+0
+0
+0
+3
+327
+327
+VUE_RUTA
+VUE_RUTA
+
+
+
+324
+0
+VARCHAR2(30)
+30
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+1
+1
+0
+0
+
+
+3
+0
+-100
+0
+0
+0
+0
+3
+328
+328
+VUE_ORIGEN
+VUE_ORIGEN
+
+
+
+324
+0
+CHAR(3)
+3
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+4
+0
+-100
+0
+0
+0
+0
+3
+329
+329
+VUE_DESTINO
+VUE_DESTINO
+
+
+
+324
+0
+CHAR(3)
+3
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+5
+0
+-100
+0
+0
+0
+0
+3
+335
+335
+VUEHIS_ID
+VUEHIS_ID
+
+
+
+334
+0
+NUMBER(30)
+30
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+1
+0
+1
+1
+0
+0
+
+
+1
+0
+-100
+0
+0
+0
+0
+3
+336
+336
+AVI_ID
+AVI_ID
+
+
+
+334
+0
+VARCHAR2(7)
+7
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+1
+0
+1
+0
+0
+
+
+2
+0
+-100
+0
+0
+0
+0
+3
+337
+337
+VUE_CODIGO
+VUE_CODIGO
+
+
+
+334
+0
+CHAR(4)
+4
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+3
+0
+-100
+0
+0
+0
+0
+3
+338
+338
+VUEHIS_FECHA
+VUEHIS_FECHA
+
+
+
+334
+0
+DATE
+0
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+4
+0
+-100
+0
+0
+0
+0
+3
+339
+339
+VUE_PESO_MAX
+VUE_PESO_MAX
+
+
+
+334
+0
+NUMBER(6,2)
+6
+2
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+5
+0
+-100
+0
+0
+0
+0
+3
+340
+340
+VUE_VOL_MAX
+VUE_VOL_MAX
+
+
+
+334
+0
+NUMBER(4)
+4
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+6
+0
+-100
+0
+0
+0
+0
+3
+341
+341
+VUEHIS_DESPACHADO
+VUEHIS_DESPACHADO
+
+
+
+334
+0
+CHAR(1)
+1
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+7
+0
+-100
+0
+0
+0
+0
+3
+342
+342
+VUEHIS_RECEPTADO
+VUEHIS_RECEPTADO
+
+
+
+334
+0
+CHAR(1)
+1
+0
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+0
+0
+0
+1
+0
+0
+
+
+8
+0
+-100
+0
+0
+0
+0
+/END_TABLE AMCCOLN
+
+/BEGIN_TABLE AMCAKEY
+@       N5
+OID     N10
+AKEY    N10
+NAME    A80
+CODE    A80
+TABL    N10
+LABL    A254
+DESC    TXT
+NOTE    TXT
+OPTS    TXT
+AKCN    A30
+NUMR    N8
+ROPR    N1
+/BEGIN_DATA AMCAKEY
+/END_TABLE AMCAKEY
+
+/BEGIN_TABLE AMCCKEY
+@       N5
+OID     N10
+CKEY    N10
+AKEY    N10
+COLN    N10
+NUMR    N8
+/BEGIN_DATA AMCCKEY
+/END_TABLE AMCCKEY
+
+/BEGIN_TABLE AMCREFR
+@       N5
+OID     N10
+REFR    N10
+NAME    A80
+CODE    A80
+LABL    A254
+DESC    TXT
+NOTE    TXT
+TABL1   N10
+TABL2   N10
+KOBJ    N10
+URUL    N1
+DRUL    N1
+MAND    N1
+CPRT    N1
+SOID    N10
+TOBJ    N5
+COBJ    A80
+FKCN    A30
+CMIN    A10
+CMAX    A10
+NGEN    N1
+CMMT    N1
+ROPR    N1
+/BEGIN_DATA AMCREFR
+1
+345
+345
+FK_MANDES_D_RMANDESXM_MANIFIES
+FK_MANDES_D_RMANDESXM_MANIFIES
+
+
+
+200
+187
+200
+1
+2
+0
+1
+0
+0
+
+FK_MANDES_D_RMANDESXM_MANIFIES
+0
+n
+0
+0
+0
+1
+348
+348
+FK_MANEMB_D_RGUIAXMAN_GUIA
+FK_MANEMB_D_RGUIAXMAN_GUIA
+
+
+
+104
+194
+104
+1
+2
+0
+1
+0
+0
+
+FK_MANEMB_D_RGUIAXMAN_GUIA
+0
+n
+0
+0
+0
+1
+351
+351
+FK_MANEMB_D_RMANEMB_M_MANIFIES
+FK_MANEMB_D_RMANEMB_M_MANIFIES
+
+
+
+207
+194
+207
+1
+2
+0
+1
+0
+0
+
+FK_MANEMB_D_RMANEMB_M_MANIFIES
+0
+n
+0
+0
+0
+1
+354
+354
+FK_MANIFIES_RMANEMBXM_MANIFIES
+FK_MANIFIES_RMANEMBXM_MANIFIES
+
+
+
+207
+200
+207
+1
+2
+0
+1
+0
+0
+
+FK_MANIFIES_RMANEMBXM_MANIFIES
+0
+n
+0
+0
+0
+1
+357
+357
+FK_MANIFIES_RVUEHISXM_VUELO_HI
+FK_MANIFIES_RVUEHISXM_VUELO_HI
+
+
+
+334
+207
+334
+1
+2
+0
+1
+0
+0
+
+FK_MANIFIES_RVUEHISXM_VUELO_HI
+0
+n
+0
+0
+0
+1
+360
+360
+FK_STOCKXES_RESTXSTOE_ESTACION
+FK_STOCKXES_RESTXSTOE_ESTACION
+
+
+
+68
+240
+68
+1
+2
+0
+1
+0
+0
+
+FK_STOCKXES_RESTXSTOE_ESTACION
+0
+n
+0
+0
+0
+1
+363
+363
+FK_STOESTGU_REGXSEG_ESTADO_G
+FK_STOESTGU_REGXSEG_ESTADO_G
+
+
+
+86
+249
+86
+1
+2
+0
+1
+0
+0
+
+FK_STOESTGU_REGXSEG_ESTADO_G
+0
+n
+0
+0
+0
+1
+366
+366
+FK_STOESTGU_RSTOESTXS_STOCKXES
+FK_STOESTGU_RSTOESTXS_STOCKXES
+
+
+
+240
+249
+240
+1
+2
+0
+1
+0
+0
+
+FK_STOESTGU_RSTOESTXS_STOCKXES
+0
+n
+0
+0
+0
+1
+369
+369
+FK_VUELO_HI_RAVIXVUEH_AVION
+FK_VUELO_HI_RAVIXVUEH_AVION
+
+
+
+22
+334
+22
+1
+2
+0
+1
+0
+0
+
+FK_VUELO_HI_RAVIXVUEH_AVION
+0
+n
+0
+0
+0
+1
+372
+372
+FK_VUELO_RTIPVUE_V_TIPOVUEL
+FK_VUELO_RTIPVUE_V_TIPOVUEL
+
+
+
+300
+324
+300
+1
+2
+0
+1
+0
+0
+
+FK_VUELO_RTIPVUE_V_TIPOVUEL
+0
+n
+0
+0
+0
+/END_TABLE AMCREFR
+
+/BEGIN_TABLE AMCCCOL
+@       N5
+OID     N10
+CCOL    N10
+COLN1   N10
+COLN2   N10
+/BEGIN_DATA AMCCCOL
+1
+346
+346
+201
+189
+1
+349
+349
+105
+197
+1
+352
+352
+208
+196
+1
+355
+355
+208
+202
+1
+358
+358
+335
+209
+1
+361
+361
+69
+241
+1
+364
+364
+87
+250
+1
+367
+367
+242
+251
+1
+370
+370
+23
+336
+1
+373
+373
+301
+326
+/END_TABLE AMCCCOL
+
+/BEGIN_TABLE AMCCREF
+@       N5
+OID     N10
+CREF    N10
+REFR    N10
+CCOL    N10
+NUMR    N8
+/BEGIN_DATA AMCCREF
+3
+347
+347
+345
+346
+1
+3
+350
+350
+348
+349
+1
+3
+353
+353
+351
+352
+1
+3
+356
+356
+354
+355
+1
+3
+359
+359
+357
+358
+1
+3
+362
+362
+360
+361
+1
+3
+365
+365
+363
+364
+1
+3
+368
+368
+366
+367
+1
+3
+371
+371
+369
+370
+1
+3
+374
+374
+372
+373
+1
+/END_TABLE AMCCREF
+
+/BEGIN_TABLE AMCINDX
+@       N5
+OID     N10
+INDX    N10
+NAME    A80
+CODE    A80
+TABL    N10
+LABL    A254
+DESC    TXT
+NOTE    TXT
+PRIM    N1
+FORN    N1
+ISAK    N1
+KOBJ    N10
+UNIQ    N1
+CLUS    N1
+OPTS    TXT
+COBJ    A80
+NUMR    N8
+TYPE    A40
+ROPR    N1
+/BEGIN_DATA AMCINDX
+3
+9
+9
+PK_AGENCIA
+PK_AGENCIA
+3
+
+
+
+1
+0
+0
+0
+1
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+1
+
+0
+3
+11
+11
+RELATION_98_FK
+RELATION_98_FK
+3
+
+
+
+0
+0
+0
+0
+0
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+2
+
+0
+3
+13
+13
+RELATION_99_FK
+RELATION_99_FK
+3
+
+
+
+0
+0
+0
+0
+0
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+3
+
+0
+3
+20
+20
+PK_APLICACION
+PK_APLICACION
+15
+
+
+
+1
+0
+0
+0
+1
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+4
+
+0
+3
+27
+27
+PK_AVION
+PK_AVION
+22
+
+
+
+1
+0
+0
+0
+1
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+5
+
+0
+3
+34
+34
+PK_CIUDAD
+PK_CIUDAD
+29
+
+
+
+1
+0
+0
+0
+1
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+6
+
+0
+3
+36
+36
+RELATION_12_FK
+RELATION_12_FK
+29
+
+
+
+0
+0
+0
+0
+0
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+7
+
+0
+3
+38
+38
+RELATION_25_FK
+RELATION_25_FK
+29
+
+
+
+0
+0
+0
+0
+0
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+8
+
+0
+3
+49
+49
+PK_CLIENTE
+PK_CLIENTE
+40
+
+
+
+1
+0
+0
+0
+1
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+9
+
+0
+3
+51
+51
+RELATION_19_FK
+RELATION_19_FK
+40
+
+
+
+0
+0
+0
+0
+0
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+10
+
+0
+3
+56
+56
+PK_ENTREGADO_EN
+PK_ENTREGADO_EN
+53
+
+
+
+1
+0
+0
+0
+1
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+11
+
+0
+3
+66
+66
+PK_EQUIPO
+PK_EQUIPO
+58
+
+
+
+1
+0
+0
+0
+1
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+12
+
+0
+3
+80
+80
+PK_ESTACION
+PK_ESTACION
+68
+
+
+
+1
+0
+0
+0
+1
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+13
+
+0
+3
+82
+82
+RELATION_122_FK
+RELATION_122_FK
+68
+
+
+
+0
+0
+0
+0
+0
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+14
+
+0
+3
+84
+84
+RELATION_13_FK
+RELATION_13_FK
+68
+
+
+
+0
+0
+0
+0
+0
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+15
+
+0
+3
+89
+89
+PK_ESTADO_GUIA
+PK_ESTADO_GUIA
+86
+
+
+
+1
+0
+0
+0
+1
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+16
+
+0
+3
+94
+94
+PK_FORMA_PAGO
+PK_FORMA_PAGO
+91
+
+
+
+1
+0
+0
+0
+1
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+17
+
+0
+3
+153
+153
+PK_GUIA
+PK_GUIA
+104
+
+
+
+1
+0
+0
+0
+1
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+18
+
+0
+3
+155
+155
+ESTACIONDESTINO_GUIA_FK
+ESTACIONDESTINO_GUIA_FK
+104
+
+
+
+0
+0
+0
+0
+0
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+19
+
+0
+3
+157
+157
+ESTORIGEN_GUIA_FK
+ESTORIGEN_GUIA_FK
+104
+
+
+
+0
+0
+0
+0
+0
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+20
+
+0
+3
+159
+159
+RELATION_199_FK
+RELATION_199_FK
+104
+
+
+
+0
+0
+0
+0
+0
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+21
+
+0
+3
+161
+161
+RELATION_345_FK
+RELATION_345_FK
+104
+
+
+
+0
+0
+0
+0
+0
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+22
+
+0
+3
+163
+163
+RELATION_352_FK
+RELATION_352_FK
+104
+
+
+
+0
+0
+0
+0
+0
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+23
+
+0
+3
+165
+165
+RELATION_353_FK
+RELATION_353_FK
+104
+
+
+
+0
+0
+0
+0
+0
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+24
+
+0
+3
+167
+167
+RELATION_412_FK
+RELATION_412_FK
+104
+
+
+
+0
+0
+0
+0
+0
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+25
+
+0
+3
+169
+169
+USUARIOXGUIA_FK
+USUARIOXGUIA_FK
+104
+
+
+
+0
+0
+0
+0
+0
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+26
+
+0
+3
+179
+179
+PK_KILOEQUIVALENCIA
+PK_KILOEQUIVALENCIA
+171
+
+
+
+1
+0
+0
+0
+1
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+27
+
+0
+3
+183
+183
+RELATION_70_FK
+RELATION_70_FK
+171
+
+
+
+0
+0
+0
+0
+0
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+28
+
+0
+3
+185
+185
+RELATION_77_FK
+RELATION_77_FK
+171
+
+
+
+0
+0
+0
+0
+0
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+29
+
+0
+3
+192
+192
+PK_MANDES_DETALLE
+PK_MANDES_DETALLE
+187
+
+
+
+1
+0
+0
+0
+1
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+30
+
+0
+3
+198
+198
+PK_MANEMB_DETALLE
+PK_MANEMB_DETALLE
+194
+
+
+
+1
+0
+0
+0
+1
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+31
+
+0
+3
+205
+205
+PK_MANIFIESTO_DESEMBARQUE
+PK_MANIFIESTO_DESEMBARQUE
+200
+
+
+
+1
+0
+0
+0
+1
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+32
+
+0
+3
+215
+215
+PK_MANIFIESTO_EMBARQUE
+PK_MANIFIESTO_EMBARQUE
+207
+
+
+
+1
+0
+0
+0
+1
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+33
+
+0
+3
+220
+220
+PK_MONEDA
+PK_MONEDA
+217
+
+
+
+1
+0
+0
+0
+1
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+34
+
+0
+3
+225
+225
+PK_PAIS
+PK_PAIS
+222
+
+
+
+1
+0
+0
+0
+1
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+35
+
+0
+3
+238
+238
+PK_REPORTE_VENTA
+PK_REPORTE_VENTA
+227
+
+
+
+1
+0
+0
+0
+1
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+36
+
+0
+3
+247
+247
+PK_STOCKXESTACION
+PK_STOCKXESTACION
+240
+
+
+
+1
+0
+0
+0
+1
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+37
+
+0
+3
+264
+264
+PK_SUBAPLICACION
+PK_SUBAPLICACION
+258
+
+
+
+1
+0
+0
+0
+1
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+38
+
+0
+3
+266
+266
+RELATION_433_FK
+RELATION_433_FK
+258
+
+
+
+0
+0
+0
+0
+0
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+39
+
+0
+3
+271
+271
+PK_TARJETA
+PK_TARJETA
+268
+
+
+
+1
+0
+0
+0
+1
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+40
+
+0
+3
+276
+276
+PK_TIPOAGENCIA
+PK_TIPOAGENCIA
+273
+
+
+
+1
+0
+0
+0
+1
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+41
+
+0
+3
+283
+283
+PK_TIPOCAMBIO
+PK_TIPOCAMBIO
+278
+
+
+
+1
+0
+0
+0
+1
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+42
+
+0
+3
+286
+286
+RELATION_36_FK
+RELATION_36_FK
+278
+
+
+
+0
+0
+0
+0
+0
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+43
+
+0
+3
+288
+288
+RELATION_41_FK
+RELATION_41_FK
+278
+
+
+
+0
+0
+0
+0
+0
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+44
+
+0
+3
+293
+293
+PK_TIPO_GUIA
+PK_TIPO_GUIA
+290
+
+
+
+1
+0
+0
+0
+1
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+45
+
+0
+3
+298
+298
+PK_TIPO_PRODUCTO
+PK_TIPO_PRODUCTO
+295
+
+
+
+1
+0
+0
+0
+1
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+46
+
+0
+3
+303
+303
+PK_TIPOVUELO
+PK_TIPOVUELO
+300
+
+
+
+1
+0
+0
+0
+1
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+47
+
+0
+3
+311
+311
+PK_USUARIO
+PK_USUARIO
+305
+
+
+
+1
+0
+0
+0
+1
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+48
+
+0
+3
+313
+313
+RELATION_81_FK
+RELATION_81_FK
+305
+
+
+
+0
+0
+0
+0
+0
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+49
+
+0
+3
+315
+315
+RELATION_84_FK
+RELATION_84_FK
+305
+
+
+
+0
+0
+0
+0
+0
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+50
+
+0
+3
+320
+320
+RELATION_434_FK
+RELATION_434_FK
+317
+
+
+
+0
+0
+0
+0
+0
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+51
+
+0
+3
+322
+322
+RELATION_435_FK
+RELATION_435_FK
+317
+
+
+
+0
+0
+0
+0
+0
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+52
+
+0
+3
+330
+330
+PK_VUELO
+PK_VUELO
+324
+
+
+
+1
+0
+0
+0
+1
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+53
+
+0
+3
+332
+332
+RELATION_52_FK
+RELATION_52_FK
+324
+
+
+
+0
+1
+0
+0
+0
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+54
+
+0
+3
+343
+343
+PK_VUELO_HISTORIAL
+PK_VUELO_HISTORIAL
+334
+
+
+
+1
+0
+0
+0
+1
+0
+<partition clause> \
+{\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+}\
+pctfree 10\
+initrans 2\
+maxtrans 255\
+tablespace ICARGO\
+storage\
+(\
+initial 10K\
+next 10K\
+minextents 1\
+maxextents \
+pctincrease 50\
+buffer_pool \
+)\
+STORAGE\
+(INITIAL 64K NEXT K MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE FREELISTS 1 BUFFER_POOL DEFAULT)LOGGING
+
+55
+
+0
+/END_TABLE AMCINDX
+
+/BEGIN_TABLE AMCCIDX
+@       N5
+OID     N10
+CIDX    N10
+INDX    N10
+COLN    N10
+ASCD    N1
+NUMR    N8
+/BEGIN_DATA AMCCIDX
+3
+10
+10
+9
+4
+1
+1
+3
+12
+12
+11
+5
+1
+1
+3
+14
+14
+13
+6
+1
+1
+3
+21
+21
+20
+16
+1
+1
+3
+28
+28
+27
+23
+1
+1
+3
+35
+35
+34
+30
+1
+1
+3
+37
+37
+36
+32
+1
+1
+3
+39
+39
+38
+31
+1
+1
+3
+50
+50
+49
+41
+1
+1
+3
+52
+52
+51
+42
+1
+1
+3
+57
+57
+56
+54
+1
+1
+3
+67
+67
+66
+59
+1
+1
+3
+81
+81
+80
+69
+1
+1
+3
+83
+83
+82
+70
+1
+1
+3
+85
+85
+84
+72
+1
+1
+3
+90
+90
+89
+87
+1
+1
+3
+95
+95
+94
+92
+1
+1
+3
+154
+154
+153
+105
+1
+1
+3
+156
+156
+155
+125
+1
+1
+3
+158
+158
+157
+124
+1
+1
+3
+160
+160
+159
+108
+1
+1
+3
+162
+162
+161
+120
+1
+1
+3
+164
+164
+163
+107
+1
+1
+3
+166
+166
+165
+121
+1
+1
+3
+168
+168
+167
+122
+1
+1
+3
+170
+170
+169
+123
+1
+1
+3
+180
+180
+179
+172
+1
+1
+3
+181
+181
+179
+173
+1
+2
+3
+182
+182
+179
+175
+1
+3
+3
+184
+184
+183
+172
+1
+1
+3
+186
+186
+185
+174
+1
+1
+3
+193
+193
+192
+188
+1
+1
+3
+199
+199
+198
+195
+1
+1
+3
+206
+206
+205
+201
+1
+1
+3
+216
+216
+215
+208
+1
+1
+3
+221
+221
+220
+218
+1
+1
+3
+226
+226
+225
+223
+1
+1
+3
+239
+239
+238
+228
+1
+1
+3
+248
+248
+247
+242
+1
+1
+3
+265
+265
+264
+259
+1
+1
+3
+267
+267
+266
+260
+1
+1
+3
+272
+272
+271
+269
+1
+1
+3
+277
+277
+276
+274
+1
+1
+3
+284
+284
+283
+279
+1
+1
+3
+285
+285
+283
+281
+1
+2
+3
+287
+287
+286
+281
+1
+1
+3
+289
+289
+288
+280
+1
+1
+3
+294
+294
+293
+291
+1
+1
+3
+299
+299
+298
+296
+1
+1
+3
+304
+304
+303
+301
+1
+1
+3
+312
+312
+311
+306
+1
+1
+3
+314
+314
+313
+308
+1
+1
+3
+316
+316
+315
+307
+1
+1
+3
+321
+321
+320
+318
+1
+1
+3
+323
+323
+322
+319
+1
+1
+3
+331
+331
+330
+325
+1
+1
+3
+333
+333
+332
+326
+1
+1
+3
+344
+344
+343
+335
+1
+1
+/END_TABLE AMCCIDX
+
+/BEGIN_TABLE AMCTRGRI
+@       N5
+OID     N10
+GUID    N10
+NAME    A30
+LABL    A254
+TEXT    TXT
+/BEGIN_DATA AMCTRGRI
+/END_TABLE AMCTRGRI
+
+/BEGIN_TABLE AMCTRGRT
+@       N5
+OID     N10
+GUID    N10
+NAME    A30
+TEMP    A30
+TEXT    TXT
+TNAM    A30
+/BEGIN_DATA AMCTRGRT
+/END_TABLE AMCTRGRT
+
+/BEGIN_TABLE AMCTRGR
+@       N5
+TEMP    A30
+TEXT    TXT
+NAME    A30
+TABL    N10
+ALWS    N1
+ORDR    N5
+/BEGIN_DATA AMCTRGR
+1
+BeforeInsertTrigger
+create trigger "ICARGO"."ESTACION_TRIGGER" BEFORE INSERT ON "ESTACION" FOR EACH ROW\
+begin select ESTACION_SEQ.nextval into :new.EST_ID from dual;\
+end;\
+/
+ESTACION_TRIGGER
+68
+1
+1
+1
+BeforeInsertTrigger
+create trigger "ICARGO"."GUIA_TRIGGER" BEFORE INSERT ON "GUIA" FOR EACH ROW\
+begin select GUIA_SEQ.nextval into :new.GUI_ID from dual;\
+end;\
+/
+GUIA_TRIGGER
+104
+1
+1
+1
+BeforeInsertTrigger
+create trigger "ICARGO"."MANDES_DETALLE_TRIGGER" BEFORE INSERT ON "MANDES_DETALLE" FOR EACH ROW\
+begin select MANDES_DETALLE_SEQ.nextval into :new.MANDESDET_ID from dual;\
+end;\
+/
+MANDES_DETALLE_TRIGGER
+187
+1
+1
+1
+BeforeInsertTrigger
+create trigger "ICARGO"."MANEMB_DETALLE_TRIGGER" BEFORE INSERT ON "MANEMB_DETALLE" FOR EACH ROW\
+begin select MANEMB_DETALLE_SEQ.nextval into :new.MANEMBDET_ID from dual;\
+end;\
+/
+MANEMB_DETALLE_TRIGGER
+194
+1
+1
+1
+BeforeInsertTrigger
+create trigger "ICARGO"."MANIFIESTO_DESEMBARQUE_TRIGGER" BEFORE INSERT ON "MANIFIESTO_DESEMBARQUE" FOR EACH ROW\
+begin select MANIFIESTO_DESEMBARQUE_SEQ.nextval into :new.MANDES_ID from dual;\
+end;\
+/
+MANIFIESTO_DESEMBARQUE_TRIGGER
+200
+1
+1
+1
+BeforeInsertTrigger
+create trigger "ICARGO"."MANIFIESTO_EMBARQUE_TRIGGER" BEFORE INSERT ON "MANIFIESTO_EMBARQUE" FOR EACH ROW\
+begin select MANIFIESTO_EMBARQUE_SEQ.nextval into :new.MANEMB_ID from dual;\
+end;\
+/
+MANIFIESTO_EMBARQUE_TRIGGER
+207
+1
+1
+1
+BeforeInsertTrigger
+create trigger "ICARGO"."REPORTE_VENTA_TRIGGER" BEFORE INSERT ON "REPORTE_VENTA" FOR EACH ROW\
+begin select REPORTE_VENTA_SEQ.nextval into :new.REPVEN_ID from dual;\
+end;\
+/
+REPORTE_VENTA_TRIGGER
+227
+1
+1
+1
+BeforeInsertTrigger
+create trigger "ICARGO"."STOCKXESTACION_TRIGGER" BEFORE INSERT ON "STOCKXESTACION" FOR EACH ROW\
+begin select STOCKXESTACION_SEQ.nextval into :new.STOEST_ID from dual;\
+end;\
+/
+STOCKXESTACION_TRIGGER
+240
+1
+1
+1
+AfterDeleteTrigger
+create trigger "ICARGO"."TDA_CLIENTE" AFTER DELETE ON "CLIENTE" FOR EACH ROW\
+declare\
+   integrity_error  exception;\
+   errno            integer;\
+   errmsg           char(200);\
+   dummy            integer;\
+   found            boolean;\
+begin\
+   IntegrityPackage.NextNestLevel;\
+    --  Delete all children in "KILOEQUIVALENCIA"     delete KILOEQUIVALENCIA\
+   where  CLI_CODIGO = :old.CLI_CODIGO;\
+    --  Delete all children in "GUIA"     delete GUIA\
+   where  CLI_CODIGO = :old.CLI_CODIGO;\
+   IntegrityPackage.PreviousNestLevel;\
+--  Errors handling exception     when integrity_error then\
+      begin\
+      IntegrityPackage.InitNestLevel;\
+      raise_application_error(errno, errmsg);\
+      end;\
+end;\
+/
+TDA_CLIENTE
+40
+1
+0
+1
+AfterDeleteTrigger
+create trigger "ICARGO"."TDA_ENTREGADO_EN" AFTER DELETE ON "ENTREGADO_EN" FOR EACH ROW\
+declare\
+   integrity_error  exception;\
+   errno            integer;\
+   errmsg           char(200);\
+   dummy            integer;\
+   found            boolean;\
+begin\
+   IntegrityPackage.NextNestLevel;\
+    --  Delete all children in "GUIA"     delete GUIA\
+   where  ENT_ID = :old.ENT_ID;\
+   IntegrityPackage.PreviousNestLevel;\
+--  Errors handling exception     when integrity_error then\
+      begin\
+      IntegrityPackage.InitNestLevel;\
+      raise_application_error(errno, errmsg);\
+      end;\
+end;\
+/
+TDA_ENTREGADO_EN
+53
+1
+0
+1
+AfterDeleteTrigger
+create trigger "ICARGO"."TDA_ESTACION" AFTER DELETE ON "ESTACION" FOR EACH ROW\
+declare\
+   integrity_error  exception;\
+   errno            integer;\
+   errmsg           char(200);\
+   dummy            integer;\
+   found            boolean;\
+begin\
+   IntegrityPackage.NextNestLevel;\
+    --  Delete all children in "CIUDAD"     delete CIUDAD\
+   where  EST_ID = :old.EST_ID;\
+    --  Delete all children in "CLIENTE"     delete CLIENTE\
+   where  EST_ID = :old.EST_ID;\
+    --  Delete all children in "TIPOCAMBIO"     delete TIPOCAMBIO\
+   where  EST_ID = :old.EST_ID;\
+    --  Delete all children in "KILOEQUIVALENCIA"     delete KILOEQUIVALENCIA\
+   where  CLI_CODIGO = :old.EST_ID;\
+    --  Delete all children in "USUARIO"     delete USUARIO\
+   where  EST_ID = :old.EST_ID;\
+    --  Delete all children in "AGENCIA"     delete AGENCIA\
+   where  EST_ID = :old.EST_ID;\
+    --  Delete all children in "GUIA"     delete GUIA\
+   where  EST_ORIGEN = :old.EST_ID;\
+    --  Delete all children in "GUIA"     delete GUIA\
+   where  EST_DESTINO = :old.EST_ID;\
+   IntegrityPackage.PreviousNestLevel;\
+--  Errors handling exception     when integrity_error then\
+      begin\
+      IntegrityPackage.InitNestLevel;\
+      raise_application_error(errno, errmsg);\
+      end;\
+end;\
+/
+TDA_ESTACION
+68
+1
+0
+1
+AfterDeleteTrigger
+create trigger "ICARGO".tda_forma_pago after delete on FORMA_PAGO for each row\
+declare\
+   integrity_error  exception;\
+   errno            integer;\
+   errmsg           char(200);\
+   dummy            integer;\
+   found            boolean;\
+begin\
+   IntegrityPackage.NextNestLevel;\
+    --  Delete all children in "FORMA_PAGOXGUIA"     delete FORMA_PAGOXGUIA\
+   where  FORPAG_ID = :old.FORPAG_ID;\
+   IntegrityPackage.PreviousNestLevel;\
+--  Errors handling exception     when integrity_error then\
+      begin\
+      IntegrityPackage.InitNestLevel;\
+      raise_application_error(errno, errmsg);\
+      end;\
+end;\
+/
+TDA_FORMA_PAGO
+91
+1
+0
+1
+AfterDeleteTrigger
+create trigger "ICARGO"."TDA_GUIA" AFTER DELETE ON "GUIA" FOR EACH ROW\
+declare\
+   integrity_error  exception;\
+   errno            integer;\
+   errmsg           char(200);\
+   dummy            integer;\
+   found            boolean;\
+begin\
+   IntegrityPackage.NextNestLevel;\
+    --  Delete all children in "FORMA_PAGOXGUIA"     delete FORMA_PAGOXGUIA\
+   where  GUI_ID = :old.GUI_ID;\
+   IntegrityPackage.PreviousNestLevel;\
+--  Errors handling exception     when integrity_error then\
+      begin\
+      IntegrityPackage.InitNestLevel;\
+      raise_application_error(errno, errmsg);\
+      end;\
+end;\
+/
+TDA_GUIA
+104
+1
+0
+1
+AfterDeleteTrigger
+create trigger "ICARGO".tda_moneda after delete on MONEDA for each row\
+declare\
+   integrity_error  exception;\
+   errno            integer;\
+   errmsg           char(200);\
+   dummy            integer;\
+   found            boolean;\
+begin\
+   IntegrityPackage.NextNestLevel;\
+    --  Delete all children in "ESTACION"     delete ESTACION\
+   where  MON_CODIGO = :old.MON_CODIGO;\
+    --  Delete all children in "TIPOCAMBIO"     delete TIPOCAMBIO\
+   where  MON_CODIGO = :old.MON_CODIGO;\
+    --  Delete all children in "KILOEQUIVALENCIA"     delete KILOEQUIVALENCIA\
+   where  MON_CODIGO = :old.MON_CODIGO;\
+   IntegrityPackage.PreviousNestLevel;\
+--  Errors handling exception     when integrity_error then\
+      begin\
+      IntegrityPackage.InitNestLevel;\
+      raise_application_error(errno, errmsg);\
+      end;\
+end;\
+/
+TDA_MONEDA
+217
+1
+0
+1
+AfterDeleteTrigger
+create trigger "ICARGO".tda_pais after delete on PAIS for each row\
+declare\
+   integrity_error  exception;\
+   errno            integer;\
+   errmsg           char(200);\
+   dummy            integer;\
+   found            boolean;\
+begin\
+   IntegrityPackage.NextNestLevel;\
+    --  Delete all children in "CIUDAD"     delete CIUDAD\
+   where  PAI_CODIGO = :old.PAI_CODIGO;\
+   IntegrityPackage.PreviousNestLevel;\
+--  Errors handling exception     when integrity_error then\
+      begin\
+      IntegrityPackage.InitNestLevel;\
+      raise_application_error(errno, errmsg);\
+      end;\
+end;\
+/
+TDA_PAIS
+222
+1
+0
+1
+AfterDeleteTrigger
+create trigger "ICARGO"."TDA_REPORTE_VENTA" AFTER DELETE ON "REPORTE_VENTA" FOR EACH ROW\
+declare\
+   integrity_error  exception;\
+   errno            integer;\
+   errmsg           char(200);\
+   dummy            integer;\
+   found            boolean;\
+begin\
+   IntegrityPackage.NextNestLevel;\
+    --  Delete all children in "GUIA"     delete GUIA\
+   where  REPVEN_ID = :old.REPVEN_ID;\
+   IntegrityPackage.PreviousNestLevel;\
+--  Errors handling exception     when integrity_error then\
+      begin\
+      IntegrityPackage.InitNestLevel;\
+      raise_application_error(errno, errmsg);\
+      end;\
+end;\
+/
+TDA_REPORTE_VENTA
+227
+1
+0
+1
+AfterDeleteTrigger
+create trigger "ICARGO".tda_tarjeta after delete on TARJETA for each row\
+declare\
+   integrity_error  exception;\
+   errno            integer;\
+   errmsg           char(200);\
+   dummy            integer;\
+   found            boolean;\
+begin\
+   IntegrityPackage.NextNestLevel;\
+    --  Delete all children in "FORMA_PAGOXGUIA"     delete FORMA_PAGOXGUIA\
+   where  TAR_ID = :old.TAR_ID;\
+   IntegrityPackage.PreviousNestLevel;\
+--  Errors handling exception     when integrity_error then\
+      begin\
+      IntegrityPackage.InitNestLevel;\
+      raise_application_error(errno, errmsg);\
+      end;\
+end;\
+/
+TDA_TARJETA
+268
+1
+0
+1
+AfterDeleteTrigger
+create trigger "ICARGO".tda_tipoagencia after delete on TIPOAGENCIA for each row\
+declare\
+   integrity_error  exception;\
+   errno            integer;\
+   errmsg           char(200);\
+   dummy            integer;\
+   found            boolean;\
+begin\
+   IntegrityPackage.NextNestLevel;\
+    --  Delete all children in "AGENCIA"     delete AGENCIA\
+   where  TIPAGE_CODIGO = :old.TIPAGE_CODIGO;\
+   IntegrityPackage.PreviousNestLevel;\
+--  Errors handling exception     when integrity_error then\
+      begin\
+      IntegrityPackage.InitNestLevel;\
+      raise_application_error(errno, errmsg);\
+      end;\
+end;\
+/
+TDA_TIPOAGENCIA
+273
+1
+0
+1
+AfterDeleteTrigger
+create trigger "ICARGO"."TDA_TIPO_GUIA" AFTER DELETE ON "TIPO_GUIA" FOR EACH ROW\
+declare\
+   integrity_error  exception;\
+   errno            integer;\
+   errmsg           char(200);\
+   dummy            integer;\
+   found            boolean;\
+begin\
+   IntegrityPackage.NextNestLevel;\
+    --  Delete all children in "GUIA"     delete GUIA\
+   where  TIPGUI_ID = :old.TIPGUI_ID;\
+   IntegrityPackage.PreviousNestLevel;\
+--  Errors handling exception     when integrity_error then\
+      begin\
+      IntegrityPackage.InitNestLevel;\
+      raise_application_error(errno, errmsg);\
+      end;\
+end;\
+/
+TDA_TIPO_GUIA
+290
+1
+0
+1
+AfterDeleteTrigger
+create trigger "ICARGO"."TDA_TIPO_PRODUCTO" AFTER DELETE ON "TIPO_PRODUCTO" FOR EACH ROW\
+declare\
+   integrity_error  exception;\
+   errno            integer;\
+   errmsg           char(200);\
+   dummy            integer;\
+   found            boolean;\
+begin\
+   IntegrityPackage.NextNestLevel;\
+    --  Delete all children in "GUIA"     delete GUIA\
+   where  TIPRO_ID = :old.TIPRO_ID;\
+   IntegrityPackage.PreviousNestLevel;\
+--  Errors handling exception     when integrity_error then\
+      begin\
+      IntegrityPackage.InitNestLevel;\
+      raise_application_error(errno, errmsg);\
+      end;\
+end;\
+/
+TDA_TIPO_PRODUCTO
+295
+1
+0
+1
+BeforeInsertTrigger
+create trigger "ICARGO"."VUELO_HISTORIAL_TRIGGER" BEFORE INSERT ON "VUELO_HISTORIAL" FOR EACH ROW\
+begin select VUELO_HISTORIAL_SEQ.nextval into :new.VUEHIS_ID from dual;\
+end;\
+/
+VUELO_HISTORIAL_TRIGGER
+334
+1
+1
+/END_TABLE AMCTRGR
+
+/BEGIN_TABLE AMCPROC
+@       N5
+OID     N10
+PROC    N10
+NAME    A80
+CODE    A80
+LABL    A254
+DESC    TXT
+NOTE    TXT
+TEXT    TXT
+FUNC    N1
+/BEGIN_DATA AMCPROC
+/END_TABLE AMCPROC
+
+/BEGIN_TABLE AMCVIEW
+@       N5
+OID     N10
+VIEW    N10
+NAME    A80
+CODE    A80
+LABL    A254
+DESC    TXT
+NOTE    TXT
+CUST    N1
+LOBJ    TXT
+QURY    TXT
+UPDT    N1
+GENE    N1
+CHCK    N1
+OWNR    N10
+ROPR    N1
+/BEGIN_DATA AMCVIEW
+/END_TABLE AMCVIEW
+
+/BEGIN_TABLE AMCRULE
+@       N5
+OID     N10
+RULE    N10
+NAME    A80
+CODE    A80
+LABL    A254
+DESC    TXT
+NOTE    TXT
+TYPE    N5
+FLAG    N5
+CEXP    TXT
+SEXP    TXT
+LOBJ    TXT
+SOID    N10
+COBJ    A80
+/BEGIN_DATA AMCRULE
+/END_TABLE AMCRULE
+
+/BEGIN_TABLE AMCTSPC
+@       N5
+OID     N10
+TSPC    N10
+NAME    A80
+CODE    A80
+LABL    A254
+DESC    TXT
+NOTE    TXT
+OPTS    TXT
+/BEGIN_DATA AMCTSPC
+1
+1
+1
+ICARGO
+ICARGO
+
+
+
+default storage\
+(\
+initial 10K\
+next 10K\
+maxextents \
+pctincrease 50\
+)\
+<online> ONLINE\
+DEFAULT\
+STORAGE\
+(INITIAL 65536 NEXT MINEXTENTS 1 MAXEXTENTS 2147483645 PCTINCREASE )
+/END_TABLE AMCTSPC
+
+/BEGIN_TABLE AMCSTOR
+@       N5
+OID     N10
+STOR    N10
+NAME    A80
+CODE    A80
+LABL    A254
+DESC    TXT
+NOTE    TXT
+OPTS    TXT
+/BEGIN_DATA AMCSTOR
+/END_TABLE AMCSTOR
+
+/BEGIN_TABLE AMCLTBL
+@       N5
+OID     N10
+LTBL    N10
+LABL    A254
+DESC    TXT
+NOTE    TXT
+OPTS    TXT
+HEAD    TXT
+FOOT    TXT
+GENE    N1
+TABL    N10
+OWNR    N10
+/BEGIN_DATA AMCLTBL
+/END_TABLE AMCLTBL
+
+/BEGIN_TABLE AMCLCOL
+@       N5
+OID     N10
+LCOL    N10
+NAME    A80
+CODE    A80
+LABL    A254
+DESC    TXT
+NOTE    TXT
+LTBL    N10
+COLN    N10
+DTTP    A30
+MLEN    N8
+PREC    N2
+MAND    N1
+UNIQ    N1
+DISP    N1
+IQIX    N4
+OPTFP   TXT
+OPTLF   TXT
+OPTLD   TXT
+OPTHG   TXT
+OPTHNG  TXT
+NUMR    N8
+/BEGIN_DATA AMCLCOL
+/END_TABLE AMCLCOL
+
+/BEGIN_TABLE AMCJREL
+@       N5
+OID     N10
+JREL    N10
+NAME    A80
+CODE    A80
+LABL    A254
+DESC    TXT
+NOTE    TXT
+LTBL1   N10
+LTBL2   N10
+MANY    N1
+/BEGIN_DATA AMCJREL
+/END_TABLE AMCJREL
+
+/BEGIN_TABLE AMCJIDX
+@       N5
+OID     N10
+JIDX    N10
+NAME    A80
+CODE    A80
+LABL    A254
+DESC    TXT
+NOTE    TXT
+OPTS    TXT
+HEAD    TXT
+FOOT    TXT
+LTBL    N10
+LOBJ    TXT
+OWNR    N10
+/BEGIN_DATA AMCJIDX
+/END_TABLE AMCJIDX
+
+/BEGIN_TABLE AMCJCCL
+@       N5
+OID     N10
+JCCL    N10
+LCOL1   N10
+LCOL2   N10
+/BEGIN_DATA AMCJCCL
+/END_TABLE AMCJCCL
+
+/BEGIN_TABLE AMCJCRL
+@       N5
+OID     N10
+JCRL    N10
+JREL    N10
+JCCL    N10
+NUMR    N8
+/BEGIN_DATA AMCJCRL
+/END_TABLE AMCJCRL
+
+/BEGIN_TABLE AMCJNIX
+@       N5
+OID     N10
+JNIX    N10
+NAME    A80
+CODE    A80
+LABL    A254
+DESC    TXT
+NOTE    TXT
+OPTS    TXT
+HEAD    TXT
+FOOT    TXT
+LOBJ    TXT
+OWNR    N10
+/BEGIN_DATA AMCJNIX
+/END_TABLE AMCJNIX
+
+/BEGIN_TABLE AMCFACT
+@       N5
+OID     N10
+FACT    N10
+NAME    A80
+CODE    A80
+LABL    A254
+DESC    TXT
+NOTE    TXT
+TABL    N10
+AGGR    TXT
+/BEGIN_DATA AMCFACT
+/END_TABLE AMCFACT
+
+/BEGIN_TABLE AMCDIM
+@       N5
+OID     N10
+DIM     N10
+NAME    A80
+CODE    A80
+LABL    A254
+DESC    TXT
+NOTE    TXT
+TABL    N10
+/BEGIN_DATA AMCDIM
+/END_TABLE AMCDIM
+
+/BEGIN_TABLE AMCHFCT
+@       N5
+OID     N10
+HFCT    N10
+NAME    A80
+CODE    A80
+LABL    A254
+DESC    TXT
+NOTE    TXT
+/BEGIN_DATA AMCHFCT
+/END_TABLE AMCHFCT
+
+/BEGIN_TABLE AMCHDIM
+@       N5
+OID     N10
+HDIM    N10
+NAME    A80
+CODE    A80
+LABL    A254
+DESC    TXT
+NOTE    TXT
+/BEGIN_DATA AMCHDIM
+/END_TABLE AMCHDIM
+
+/BEGIN_TABLE AMCMETR
+@       N5
+OID     N10
+METR    N10
+NAME    A80
+CODE    A80
+LABL    A254
+DESC    TXT
+NOTE    TXT
+TTYP    N10
+COLN    N10
+FRML    TXT
+AGGR    TXT
+/BEGIN_DATA AMCMETR
+/END_TABLE AMCMETR
+
+/BEGIN_TABLE AMCATTR
+@       N5
+OID     N10
+ATTR    N10
+NAME    A80
+CODE    A80
+LABL    A254
+DESC    TXT
+NOTE    TXT
+TTYP    N10
+COLN    N10
+/BEGIN_DATA AMCATTR
+/END_TABLE AMCATTR
+
+/BEGIN_TABLE AMCNODE
+@       N5
+OID     N10
+NODE    N10
+PNODE   N10
+TYPE    N10
+NUMR    N8
+GENE    N1
+/BEGIN_DATA AMCNODE
+/END_TABLE AMCNODE
+
+/BEGIN_TABLE AMCDTBS
+@       N5
+OID     N10
+DTBS    N10
+NAME    A80
+CODE    A80
+LABL    A254
+DESC    TXT
+NOTE    TXT
+DEFF    A256
+DTSC    A80
+SRVN    A30
+LOGN    A128
+PASS    A256
+/BEGIN_DATA AMCDTBS
+/END_TABLE AMCDTBS
+
+/BEGIN_TABLE AMCETBL
+@       N5
+OID     N10
+ETBL    N10
+NAME    A80
+CODE    A80
+LABL    A254
+DESC    TXT
+NOTE    TXT
+DTBS    N10
+/BEGIN_DATA AMCETBL
+/END_TABLE AMCETBL
+
+/BEGIN_TABLE AMCECOL
+@       N5
+OID     N10
+ECOL    N10
+NAME    A80
+CODE    A80
+LABL    A254
+DESC    TXT
+NOTE    TXT
+ETBL    N10
+DTTP    A30
+MLEN    N8
+PREC    N2
+DISP    N1
+NUMR    N8
+/BEGIN_DATA AMCECOL
+/END_TABLE AMCECOL
+
+/BEGIN_TABLE AMCTSRC
+@       N5
+OID     N10
+TSRC    N10
+TABL    N10
+DTBS    N10
+SCRPT   TXT
+INVLD   N1
+LOBJ    TXT
+/BEGIN_DATA AMCTSRC
+/END_TABLE AMCTSRC
+
+/BEGIN_TABLE AMCCSRC
+@       N5
+OID     N10
+CSRC    N10
+COLN    N10
+TSRC    N10
+ALIAS   A80
+EXPR    TXT
+INVLD   N1
+LOBJ    TXT
+/BEGIN_DATA AMCCSRC
+/END_TABLE AMCCSRC
+
+/BEGIN_TABLE AMCRPRT
+@       N5
+OID     N10
+RPRT    N10
+FLGS    N8
+NAME    A64
+DESC    A254
+TMLT    BIN
+/BEGIN_DATA AMCRPRT
+/END_TABLE AMCRPRT
+
+/BEGIN_TABLE AMCSLCT
+RPRT    N10
+MODL    N10
+LOBJ    TXT
+/BEGIN_DATA AMCSLCT
+/END_TABLE AMCSLCT
+
+/BEGIN_TABLE AMCCNST
+@       N5
+CNST    N10
+MODL    N10
+NAME    A30
+TYPE    A20
+VALE    A254
+RSRV    N1
+/BEGIN_DATA AMCCNST
+/END_TABLE AMCCNST
+
+/BEGIN_TABLE AMCEXAT
+@       N5
+EXAT    N10
+MODL    N10
+NAME    A30
+TYPE    A20
+LABL    A254
+VALE    A254
+TOBJ    N5
+RSRV    N1
+/BEGIN_DATA AMCEXAT
+/END_TABLE AMCEXAT
+
+/BEGIN_TABLE AMCEXAV
+@       N5
+EXAV    N10
+MODL    N10
+EXAT    N10
+VALE    A254
+OBJT    N10
+/BEGIN_DATA AMCEXAV
+/END_TABLE AMCEXAV
+
+/BEGIN_TABLE PBEDTS
+@       N5
+EDTN    N10
+NAME    A30
+EDIT    A254
+TYPE    N5
+CNTR    N8
+SEQN    N5
+FLAG    N12
+RSVD    A32
+/BEGIN_DATA PBEDTS
+/END_TABLE PBEDTS
+
+/BEGIN_TABLE PBFRMT
+@       N5
+FMTN    N10
+NAME    A30
+FRMT    A254
+TYPE    N5
+CNTR    N8
+GENE    N8
+/BEGIN_DATA PBFRMT
+/END_TABLE PBFRMT
+
+/BEGIN_TABLE PBVALD
+@       N5
+VLDN    N10
+NAME    A30
+VALD    A254
+TYPE    N5
+CNTR    N8
+VMSG    A254
+GENE    N8
+/BEGIN_DATA PBVALD
+/END_TABLE PBVALD
+
+/BEGIN_TABLE AMCFONT
+FONT    N5
+FNAM    A32
+FSIZ    N5
+FSTY    N5
+/BEGIN_DATA AMCFONT
+1
+Arial
+8
+0
+2
+Arial
+8
+1
+3
+MS Sans Serif
+8
+0
+4
+Arial
+8
+8
+5
+Arial
+6
+0
+/END_TABLE AMCFONT
+
+/BEGIN_TABLE AMCPENS
+PENS    N5
+PSTY    N5
+PCLR    N8
+PWID    N5
+/BEGIN_DATA AMCPENS
+1
+1
+0
+0
+2
+1
+255
+0
+/END_TABLE AMCPENS
+
+/BEGIN_TABLE AMCBRSH
+BRSH    N5
+BSTY    N5
+BCLR    N8
+BHAT    N5
+/BEGIN_DATA AMCBRSH
+1
+0
+16777215
+0
+2
+0
+32896
+0
+3
+0
+255
+0
+/END_TABLE AMCBRSH
+
+/BEGIN_TABLE AMCPROP
+PROP    N5
+MODL    N10
+SUBM    N10
+SECT    A50
+NPRO    A30
+VPRO    A80
+/BEGIN_DATA AMCPROP
+0
+3
+0
+DataArchitect
+Shadow
+no
+1
+3
+0
+DataArchitect
+AutoAdjust
+yes
+2
+3
+0
+DataArchitect
+LineStyle
+2
+3
+3
+0
+DataArchitect
+PrnScale
+100
+4
+3
+0
+DataArchitect
+Orientation
+2
+5
+3
+0
+DataArchitect
+LengthName
+80
+6
+3
+0
+DataArchitect
+UpprCaseName
+no
+7
+3
+0
+DataArchitect
+LowrCaseName
+no
+8
+3
+0
+DataArchitect
+AllowAllName
+yes
+9
+3
+0
+DataArchitect
+AllowChrName
+<Null>
+10
+3
+0
+DataArchitect
+InvldChrName
+"+-*/\.,!:;"
+11
+3
+0
+DataArchitect
+NoAccentName
+no
+12
+3
+0
+DataArchitect
+LengthCode
+80
+13
+3
+0
+DataArchitect
+UpprCaseCode
+yes
+14
+3
+0
+DataArchitect
+LowrCaseCode
+no
+15
+3
+0
+DataArchitect
+AllowAllCode
+no
+16
+3
+0
+DataArchitect
+AllowChrCode
+'a'-'z', 'A'-'Z', '0'-'9', "_"
+17
+3
+0
+DataArchitect
+InvldChrCode
+<Null>
+18
+3
+0
+DataArchitect
+NoAccentCode
+yes
+19
+3
+0
+DataArchitect
+NoSplitting
+yes
+20
+3
+0
+DataArchitect
+Truncation
+no
+21
+3
+0
+DataArchitect
+Wrapping
+no
+22
+3
+0
+DataArchitect
+WrapLength
+80
+23
+3
+0
+DataArchitect
+WrapChar
+" !""#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
+24
+3
+0
+DataArchitect
+PdmShowName
+no
+25
+3
+0
+DataArchitect
+PdmShowPrim
+yes
+26
+3
+0
+DataArchitect
+PdmShowColn
+yes
+27
+3
+0
+DataArchitect
+PdmShowDttp
+yes
+28
+3
+0
+DataArchitect
+PdmShowDomains
+no
+29
+3
+0
+DataArchitect
+PdmShowKeys
+no
+30
+3
+0
+DataArchitect
+PdmShowKeyLevel
+no
+31
+3
+0
+DataArchitect
+PdmShowAkey
+no
+32
+3
+0
+DataArchitect
+PdmShowIdxLevel
+no
+33
+3
+0
+DataArchitect
+PdmShowNull
+yes
+34
+3
+0
+DataArchitect
+PdmShowIndx
+no
+35
+3
+0
+DataArchitect
+PdmShowOwnr
+no
+36
+3
+0
+DataArchitect
+PdmShowNameRefr
+no
+37
+3
+0
+DataArchitect
+PdmShowJoinRefr
+yes
+38
+3
+0
+DataArchitect
+PdmShowConsRefr
+no
+39
+3
+0
+DataArchitect
+PdmShowCnstRefr
+no
+40
+3
+0
+DataArchitect
+PdmShowIdclRefr
+no
+41
+3
+0
+DataArchitect
+PdmShowCardRefr
+no
+42
+3
+0
+DataArchitect
+PdmShowColnView
+yes
+43
+3
+0
+DataArchitect
+PdmShowDttpView
+yes
+44
+3
+0
+DataArchitect
+PdmShowExprView
+yes
+45
+3
+0
+DataArchitect
+PdmShowTablView
+yes
+46
+3
+0
+DataArchitect
+PdmShowOwnrView
+no
+47
+3
+0
+DataArchitect
+PdmRltnMode
+yes
+48
+3
+0
+DataArchitect
+PdmAutoMigrFkey
+yes
+49
+3
+0
+DataArchitect
+PdmAutoMigrDmn
+yes
+50
+3
+0
+DataArchitect
+PdmAutoMigrChk
+yes
+51
+3
+0
+DataArchitect
+PdmAutoMigrRul
+yes
+52
+3
+0
+DataArchitect
+PdmAutoMigrExa
+no
+53
+3
+0
+DataArchitect
+PdmNonAutoMigrDef
+1
+54
+3
+0
+DataArchitect
+PdmRefrUnique
+yes
+55
+3
+0
+DataArchitect
+PdmColnDmnNoDiv
+no
+56
+3
+0
+DataArchitect
+PdmColnDmnDivInd
+1
+57
+3
+0
+DataArchitect
+PdmDefDttp
+
+58
+3
+0
+DataArchitect
+PdmDefMlen
+0
+59
+3
+0
+DataArchitect
+PdmDefPrec
+0
+60
+3
+0
+DataArchitect
+PdmRebuildIndxPK
+yes
+61
+3
+0
+DataArchitect
+PdmRebuildIndxFK
+yes
+62
+3
+0
+DataArchitect
+PdmRebuildIndxAK
+yes
+63
+3
+0
+DataArchitect
+PdmRebuildIndxSK
+yes
+64
+3
+0
+DataArchitect
+PdmRebuildIndxPreserve
+no
+65
+3
+0
+DataArchitect
+PKIndexName
+%TABLE%_PK
+66
+3
+0
+DataArchitect
+FKIndexName
+%REFR%_FK
+67
+3
+0
+DataArchitect
+AKIndexName
+%AKEY%_AK
+68
+3
+0
+DataArchitect
+SKIndexName
+%SKEY%_SK
+69
+3
+0
+DataArchitect
+IndexThreshold
+
+70
+3
+0
+DataArchitect
+DwShowSSrv
+no
+71
+3
+0
+DataArchitect
+DwShowLCol
+yes
+72
+3
+0
+DataArchitect
+DwShowLColDttp
+yes
+73
+3
+0
+DataArchitect
+DwShowIQIndx
+yes
+74
+3
+0
+DataArchitect
+DwShowLTblOwnr
+yes
+75
+3
+0
+DataArchitect
+DwShowNameJref
+no
+76
+3
+0
+DataArchitect
+DwShowJoinJref
+yes
+77
+3
+0
+DataArchitect
+DwShowCardJref
+no
+78
+3
+0
+DataArchitect
+Language
+1034
+/END_TABLE AMCPROP
+
+/BEGIN_TABLE AMCSYMB
+@       N5
+SID     N10
+TSYM    N5
+SSYM    N8
+NUMR    N8
+CSID    N10
+SID1    N10
+SID2    N10
+CLND    N10
+CLNN    N5
+RCX1    N8
+RCY1    N8
+RCX2    N8
+RCY2    N8
+PENS    N5
+BRSH    N5
+CTXT    N8
+FONT    N5
+JUST    N5
+WOVL    N8
+HOVL    N8
+SARR    N5
+CARR    N5
+TARR    N5
+NBPT    N8
+LSPT    BIN
+LSTY    N5
+TEXT    TXT
+PICT    PIC
+BTMP    BMP
+GRPH    N10
+OID     N10
+OLE     BIN
+/BEGIN_DATA AMCSYMB
+3
+3
+289
+0
+1
+0
+0
+0
+0
+0
+-91864
+41336
+-68094
+47637
+2
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+
+
+
+2
+3
+
+3
+4
+289
+0
+2
+0
+0
+0
+0
+0
+-65093
+42311
+-44322
+47637
+2
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+
+
+
+2
+15
+
+3
+5
+289
+0
+3
+0
+0
+0
+0
+0
+-41321
+42311
+-22650
+47637
+2
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+
+
+
+2
+29
+
+3
+6
+289
+0
+4
+0
+0
+0
+0
+0
+-19649
+38412
+-602
+47637
+2
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+
+
+
+2
+40
+
+3
+7
+289
+0
+5
+0
+0
+0
+0
+0
+2399
+44112
+21371
+47637
+2
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+
+
+
+2
+53
+
+3
+8
+289
+0
+6
+0
+0
+0
+0
+0
+24372
+39387
+43419
+47637
+2
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+
+
+
+2
+58
+
+3
+9
+289
+0
+7
+0
+0
+0
+0
+0
+46420
+44112
+67192
+47637
+2
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+
+
+
+2
+91
+
+3
+10
+289
+0
+8
+0
+0
+0
+0
+0
+70193
+39387
+91864
+47637
+2
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+
+
+
+2
+96
+
+3
+11
+289
+0
+9
+0
+0
+0
+0
+0
+-91864
+26161
+-74017
+34411
+2
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+
+
+
+2
+171
+
+3
+12
+289
+0
+10
+0
+0
+0
+0
+0
+-71016
+30886
+-51745
+34411
+2
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+
+
+
+2
+217
+
+3
+13
+289
+0
+11
+0
+0
+0
+0
+0
+-48744
+30886
+-30073
+34411
+2
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+
+
+
+2
+222
+
+3
+14
+289
+0
+12
+0
+0
+0
+0
+0
+-27072
+23236
+-4801
+34411
+2
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+
+
+
+2
+227
+
+3
+15
+289
+0
+13
+0
+0
+0
+0
+0
+-1800
+29085
+13873
+34411
+2
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+
+
+
+2
+253
+
+3
+16
+289
+0
+14
+0
+0
+0
+0
+0
+16874
+28110
+39370
+34411
+2
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+
+
+
+2
+258
+
+3
+17
+289
+0
+15
+0
+0
+0
+0
+0
+42371
+30886
+61343
+34411
+2
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+
+
+
+2
+268
+
+3
+18
+289
+0
+16
+0
+0
+0
+0
+0
+64344
+30886
+84816
+34411
+2
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+
+
+
+2
+273
+
+3
+19
+289
+0
+17
+0
+0
+0
+0
+0
+-91864
+13909
+-74317
+19235
+2
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+
+
+
+2
+278
+
+3
+20
+289
+0
+18
+0
+0
+0
+0
+0
+-71316
+15710
+-51144
+19235
+2
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+
+
+
+2
+290
+
+3
+21
+289
+0
+19
+0
+0
+0
+0
+0
+-48143
+15710
+-28272
+19235
+2
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+
+
+
+2
+295
+
+3
+22
+289
+0
+20
+0
+0
+0
+0
+0
+-25271
+12934
+-6000
+19235
+2
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+
+
+
+2
+305
+
+3
+23
+289
+0
+21
+0
+0
+0
+0
+0
+-2999
+15710
+12898
+19235
+2
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+
+
+
+2
+317
+
+3
+24
+289
+0
+22
+0
+0
+0
+0
+0
+-90552
+3607
+-73231
+8933
+2
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+
+
+
+2
+22
+
+3
+25
+289
+0
+23
+0
+0
+0
+0
+0
+-91864
+-9619
+-71918
+-394
+2
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+
+
+
+2
+334
+
+3
+26
+289
+0
+24
+0
+0
+0
+0
+0
+-91564
+-21870
+-72517
+-13620
+2
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+
+
+
+2
+207
+
+3
+27
+289
+0
+25
+0
+0
+0
+0
+0
+-91864
+-31197
+-72217
+-25871
+2
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+
+
+
+2
+200
+
+3
+28
+289
+0
+26
+0
+0
+0
+0
+0
+-91864
+-40523
+-74693
+-35198
+2
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+
+
+
+2
+187
+
+3
+29
+289
+0
+27
+0
+0
+0
+0
+0
+-68917
+-3216
+-50620
+8933
+2
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+
+
+
+2
+68
+
+3
+30
+289
+0
+28
+0
+0
+0
+0
+0
+-68917
+-14493
+-50770
+-7217
+2
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+
+
+
+2
+240
+
+3
+31
+289
+0
+29
+0
+0
+0
+0
+0
+-47619
+5408
+-27148
+8933
+2
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+
+
+
+2
+86
+
+3
+32
+289
+0
+30
+0
+0
+0
+0
+0
+-47619
+-2944
+-31947
+1407
+2
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+
+
+
+2
+249
+
+3
+33
+289
+0
+31
+0
+0
+0
+0
+0
+-24147
+-39284
+224
+8933
+2
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+
+
+
+2
+104
+
+3
+34
+289
+0
+32
+0
+0
+0
+0
+0
+-24147
+-47636
+-7200
+-43285
+2
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+
+
+
+2
+194
+
+3
+35
+289
+0
+33
+0
+0
+0
+0
+0
+3225
+5408
+23621
+8933
+2
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+
+
+
+2
+300
+
+3
+36
+289
+0
+34
+0
+0
+0
+0
+0
+3225
+-4894
+21222
+1407
+2
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+
+
+
+2
+324
+
+3
+37
+290
+0
+35
+0
+27
+28
+0
+0
+0
+0
+0
+0
+2
+3
+0
+0
+0
+0
+0
+1
+0
+0
+4
+87bffeff8a90ffff87bffeff527effffb1bafeff527effffb1bafeff1b6cffff
+2
+
+
+
+2
+345
+
+3
+71
+290
+0
+36
+0
+33
+34
+0
+0
+0
+0
+0
+0
+2
+3
+0
+0
+0
+0
+0
+1
+0
+0
+4
+46d1ffffb8c4ffff46d1ffffbc5effffc6c2ffffbc5effffc6c2ffff6b4effff
+2
+
+
+
+2
+348
+
+3
+74
+290
+0
+37
+0
+26
+34
+0
+0
+0
+0
+0
+0
+2
+3
+0
+0
+0
+0
+0
+1
+0
+0
+3
+87bffeffafbaffff87bffeff6b4effffc6c2ffff6b4effff
+2
+
+
+
+2
+351
+
+3
+77
+290
+0
+38
+0
+26
+27
+0
+0
+0
+0
+0
+0
+2
+3
+0
+0
+0
+0
+0
+1
+0
+0
+2
+87bffeffafbaffff87bffeff8a90ffff
+2
+
+
+
+2
+354
+
+3
+80
+290
+0
+39
+0
+25
+26
+0
+0
+0
+0
+0
+0
+2
+3
+0
+0
+0
+0
+0
+1
+0
+0
+2
+d2bffeff71ecffffd2bffeffafbaffff
+2
+
+
+
+2
+357
+
+3
+83
+290
+0
+40
+0
+29
+30
+0
+0
+0
+0
+0
+0
+2
+3
+0
+0
+0
+0
+0
+1
+0
+0
+2
+6116ffff2a0b00006116ffff99d5ffff
+2
+
+
+
+2
+360
+
+3
+86
+290
+0
+41
+0
+31
+32
+0
+0
+0
+0
+0
+0
+2
+3
+0
+0
+0
+0
+0
+1
+0
+0
+4
+f86dffff021c0000f86dffff4f0d00009964ffff4f0d00009964fffffffcffff
+2
+
+
+
+2
+363
+
+3
+89
+290
+0
+42
+0
+30
+32
+0
+0
+0
+0
+0
+0
+2
+3
+0
+0
+0
+0
+0
+1
+0
+0
+3
+3c16ffff99d5ffff3c16fffffffcffff9964fffffffcffff
+2
+
+
+
+2
+366
+
+3
+92
+290
+0
+43
+0
+24
+25
+0
+0
+0
+0
+0
+0
+2
+3
+0
+0
+0
+0
+0
+1
+0
+0
+2
+1cc0feff7e1800001cc0feff71ecffff
+2
+
+
+
+2
+369
+
+3
+95
+290
+0
+44
+0
+35
+36
+0
+0
+0
+0
+0
+0
+2
+3
+0
+0
+0
+0
+0
+1
+0
+0
+4
+6f340000021c00006f3400004f0d0000bf2f00004f0d0000bf2f000030f9ffff
+2
+
+
+
+2
+372
+
+/END_TABLE AMCSYMB
+
+

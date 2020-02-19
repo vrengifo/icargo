@@ -1,0 +1,609 @@
+<html><head>
+<link rel="stylesheet" type="text/css" href="includes/style/bluish.css">
+<script type="text/javascript" language="JavaScript"><!--
+function toggle(object) {
+  var Event = window.event || arguments.callee.caller.arguments[0];
+
+  if (document.getElementById) {
+    if (document.getElementById(object).style.visibility == 'visible')
+      document.getElementById(object).style.visibility = 'hidden';
+    else {
+      document.getElementById(object).style.left = Event.x+15;
+      document.getElementById(object).style.top  = Event.y-20;
+      document.getElementById(object).style.visibility = 'visible';
+      }
+  }
+
+  else if (document.layers && document.layers[object] != null) {
+    if (document.layers[object].visibility == 'visible' ||
+     document.layers[object].visibility == 'show' )
+      document.layers[object].visibility = 'hidden';
+    else {
+      document.layers[object].left = Event.x+15;
+      document.layers[object].top  = Event.y-20;
+      document.layers[object].visibility = 'visible';
+      }
+  }
+
+  else if (document.all) {
+    if (document.all[object].style.visibility == 'visible')
+      document.all[object].style.visibility = 'hidden';
+    else {
+      document.all[object].style.pixelLeft = document.body.scrollLeft + Event.x + 1;
+      document.all[object].style.pixelTop = document.body.scrollTop + Event.y + 1;
+      document.all[object].style.visibility = 'visible';
+      }
+  }
+
+  return false;
+}
+//--></script>
+        <script language="JavaScript" src="js/overlib.js"></script>
+        <script language="JavaScript" src="js/donothing.js"></script>
+        <script language="JavaScript" src="js/confirm.js"></script>
+
+		<script language="JavaScript" src="js/date-picker.js"></script>
+		<script language="JavaScript" src="js/valida_ci.js"></script>
+        <script language="JavaScript">
+        <!--
+                // handleEnter allows forms to 'tab' to the next field when the enter key is pushed, instead of submitting
+	function handleEnter (field, event) {
+		var keyCode = event.keyCode ? event.keyCode : event.which ? event.which : event.charCode;
+		if (keyCode == 13) {
+			var i;
+			for (i = 0; i < field.form.elements.length; i++)
+				if (field == field.form.elements[i])
+					break;
+			i = (i + 1) % field.form.elements.length;
+			field.form.elements[i].focus();
+			return false;
+		}
+		else
+		return true;
+	}                //-->
+        </script>
+
+        <script language="JavaScript">
+        <!--
+                                function highlightField (field,select) {
+                var i;
+                for (i = 0; i < field.form.elements.length; i++)
+                        if (field == field.form.elements[i])
+                                break;
+//                if (NS4) {
+//                        field.form.elements[i].bgColor = '#E7EEF5';
+//                } else {
+                        field.form.elements[i].style.backgroundColor = '#E7EEF5';
+//                }
+                if (select&&field.form.elements[i].type=="text") field.form.elements[i].select();
+        }
+
+
+        function normalField (field) {
+                var i;
+                for (i = 0; i < field.form.elements.length; i++)
+                        if (field == field.form.elements[i])
+                                break;
+//                if (NS4) {
+//                        field.form.elements[i].bgColor = '#FFFFFF';
+//                } else {
+                        field.form.elements[i].style.backgroundColor = '#FFFFFF';
+//                }
+
+        }
+
+        function highlightFieldFirst () {
+                var i;
+				var oele;
+                i = 0;
+				if (document.forms.length == 0) return;
+
+					// get a shortcut to the elements array
+					oele = document.forms[0].elements;
+
+					// find the first non hidden field
+					for (i=0; i < oele.length; i++) {
+                        if (oele[i].type!="hidden")  break;
+					}
+					// if all the fields were hidden return
+	  				if (i == oele.length) return;
+
+                    if (oele[i].type=="text") oele[i].select();
+                    oele[i].focus();
+                    if (oele[i].type=="text"||oele[i].type=="select"||oele[i].type=="textarea") highlightField(oele[i], '1');
+        }                //-->
+        </script>
+        <script language="Javascript1.1">
+            function imgchange(imgName,imgSrc) {
+                if (document.images) {
+                    document.images[imgName].src = imgSrc;
+                }
+            }
+            function imgchange2(imgName, imgSrc) {
+                if (document.images) {
+                    document[imgName].src = eval(imgSrc + ".src");
+                }
+            }
+        </script>
+
+<SCRIPT LANGUAGE="Javascript">
+function cambiar_action(forma,url_destino)
+{
+    forma.action=url_destino;
+}
+
+function chequear_cedula()
+{
+
+}
+
+function busca_combo(group,valor)
+{
+  //alert(valor);
+  var tarreglo=group.length;
+  var aux=0;
+  var flag=0;//bandera
+
+  var tvalor=valor.length;
+
+  var i;
+  var vindice;
+  var vtexto;
+  var vvalor;
+  var cad;
+
+  //alert(tvalor);
+  if (tvalor>0)//buscar 1ra ocurrencia
+  {
+    i=0;
+  	while((i<tarreglo)&&(!flag))
+  	//for (i=0;i<group.length;i++)
+    {
+  	  vtexto=group[i].text;
+  	  vvalor=group[i].value;
+  	  vindice=i;
+  	  cad="vtexto:" + vtexto + " vvalor:" + vvalor + " vindice:" + vindice;
+  	  //alert(cad);
+
+
+  	  if(vtexto.substr(0,tvalor)==valor)
+  	  {
+  	  	flag=1;
+  	  }
+  	    i=i+1;
+    }
+  }
+  if(flag==1)
+    group.options[vindice].selected=true;
+  //else
+    //group.options[0].selected=true;
+  //alert(vindice);
+}
+
+//busca el separador decimal cargado en el browser
+function jsSeparador()
+{
+  var resultado;
+  var res;
+  resultado=eval(1/2);
+  res=new String(resultado);
+  res=res.substring(1,2);
+  return(res);
+}
+
+//sustituye en una cadena cad, "busca" por "por"
+function jsSustituir(cad,busca,por)
+{
+  var i;
+  var aux,recu;
+
+  if(busca==por)
+  {
+  	return(cad);
+  }
+  else
+  {
+    aux="";
+    for(i=0;i<cad.length;i++)
+    {
+	  if(cad.charAt(i)==busca)
+	  {
+	    recu=por;
+	  }
+	  else
+	  {
+	    recu=cad.charAt(i);
+	  }
+	  aux=aux.concat(recu);
+    }
+    return(aux);
+  }
+}
+
+</script>
+
+<link href="estilos.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" src="js/validation.js"></script>
+<SCRIPT LANGUAGE="JavaScript">var formissent = 0;function onlyOneSubmit() {if (!formissent) {formissent = 1; return true; } else { return false; }}</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">
+function hideRow(rowid) { document.getElementById(rowid).style.display = "none"; }
+var iFrameIndex = new Number(0);
+//var iFrameId = new Array("notifyZero","notifyOne","notifyTwo","notifyThree","notifyFour","notifyFive","notifySix");
+//var shimHTML = new String('<IMG SRC="/s360v2/spacer.gif" WIDTH=10 HEIGHT=10>');
+function setNotification()
+{
+var iFrameId = new String("notify");
+var args = setNotification.arguments;
+if (args.length < 2) return false;
+iFrameId += iFrameIndex;
+iFrameIndex < 7 ? iFrameIndex++ : iFrameIndex=0;
+iFrameURL = new String("s360.exe?");
+for (i=0; i<args.length; i+=2)
+{
+	iFrameURL += args[i] + "=" + args[i+1] + "&";
+}
+//alert(iFrameURL);
+//alert(iFrameId);
+eval("var cf = window.frames."+iFrameId);
+cf.location.replace(iFrameURL);
+}
+</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">function helpWindow() { window.open('documentacion/manualUsuario.pdf','Help','width=680,height=500,resizable=1,scrollbars=1,toolbar=0,menubar=0,location=0');}</SCRIPT>
+<!--
+pv
+-->
+<SCRIPT LANGUAGE="JavaScript">
+function fOpenWindow(vurl,vtitle,vwidth,vheight)
+{
+ var cad;
+ cad='width=' + vwidth + ',height=' + vheight + ',resizable=1,scrollbars=1,toolbar=0,menubar=0,location=0';
+ //alert (vurl);
+ //alert (vtitle);
+ //alert (cad);
+ window.open(vurl,vtitle,cad);
+}
+</SCRIPT>
+<!--
+pv
+-->
+<SCRIPT LANGUAGE="Javascript">
+function over( style ) { style.borderLeftColor="#FFFFFF"; style.borderTopColor="#FFFFFF"; style.borderRightColor="#333333"; style.borderBottomColor="#333333"; }
+function mout( style ) { style.borderColor="#90A8C8" }
+function tout( style ) { style.borderColor="#94ACC8" }
+function overborder( style, clr ) {style.borderColor=clr }
+function moutborder( style, clr ) {style.borderColor=clr }
+function showstatus( lbl ) { status = lbl; return true; }
+function hidestatus() {status = ""; }
+</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">
+function showFullContents(dobj)
+{
+var dwidth = parseInt(dobj.style.width) * 1.5;
+var dheight = parseInt(dobj.style.height) * 1.5;
+dobj.style.zIndex = 90;
+if (dheight < 200) dobj.style.height = dheight;
+if (dwidth < 200) dobj.style.width = dwidth;
+dobj.style.clip = "rect(auto,"+dwidth+"px,"+dheight+"px,auto)";
+}
+function hideFullContents(dobj,dheight,dwidth,dzindex)
+{
+dobj.style.zIndex = dzindex;
+dobj.style.height = dheight;
+dobj.style.width = dwidth;
+dobj.style.clip = "rect(auto,"+dwidth+"px,"+dheight+"px,auto)";
+}
+
+</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">
+var chk = 1
+function checkAll(fmnm,cbnm)
+{
+var cb = document.forms[fmnm].elements[cbnm];
+	if (cb && cb.value)
+	{
+		cb.checked = chk ? 1 : 0;
+		highlightRow(cb.value,cb.checked);
+	}
+	else if (cb)
+	{
+		for (i=0;i<cb.length;i++)
+		{
+			cb[i].checked = chk ? 1 : 0;
+			highlightRow(cb[i].value,cb[i].checked);
+		}
+	}
+	chk = (chk) ? 0 : 1;
+}
+function highlightRow(rid,chk)
+{
+var tr = document.getElementById(eval("'tr"+rid+"'"));
+	if (chk && tr)
+	{
+		tr.style.backgroundColor = "#90A8C8";
+	}
+	else if (tr)
+	{
+		tr.style.backgroundColor = "";
+
+	}
+}
+
+</SCRIPT>
+
+<TITLE>.:: Sistema de Carga ::.</TITLE>
+</head>
+<body onLoad="valida();highlightFieldFirst();" class="" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+<div id="overDiv" style="position:absolute; visibility:hidden; z-index:1000;"></div>
+<table border=0 width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td valign=top>
+<!-- startprint --><TABLE WIDTH="100%" BORDER=0 CELLPADDING=0 CELLSPACING=1 BGCOLOR="#075685">
+			  	<TR>
+    				<TD ROWSPAN=2 BGCOLOR="#FFFFFF" WIDTH="10%" ALIGN=center VALIGN=middle>
+    				  <a href="#" onClick="helpWindow();"><img src="images/logo.gif" border=0 alt="Ayuda"></a>
+    				</TD>
+    				<TD BGCOLOR="#075685"><TABLE BORDER=0 WIDTH="100%" CELLPADDING=1 CELLSPACING=0>
+		        <TR>
+        			<TD></TD>
+			        <TD><SPAN CLASS="LoginName">Administrador&nbsp;&nbsp;&nbsp;&nbsp;Última Actualización a :&nbsp;2006-10-02 09:21:16</SPAN></TD>
+	          		<TD><select name="Start" onChange="i=this.selectedIndex;v=this.options[i].value;if(v)location.href=v;" CLASS="topSelector">
+			              <option value="">Ir a ...
+        			      <OPTION VALUE="">----</OPTION><option value="admin.php?id_aplicacion=1">Stock</OPTION>
+<option value="admin.php?id_aplicacion=2">Ventas</OPTION>
+<option value="admin.php?id_aplicacion=3">Embarque y Desembarque</OPTION>
+<option value="admin.php?id_aplicacion=4">Usuarios</OPTION>
+<option value="admin.php?id_aplicacion=5">Módulos</OPTION>
+<option value="admin.php?id_aplicacion=6">Administración</OPTION>
+<option value="admin.php?id_aplicacion=7">Reportes de Ventas</OPTION>
+<option value="admin.php?id_aplicacion=61">Historial</OPTION>
+</select></td>
+	        	 	<form name="logoutform" method=post action="logout.php">
+	            		<TD VALIGN=middle>
+        	      		<SPAN CLASS="ButtonTop" onclick="document.forms['logoutform'].submit()" onmouseover="overborder(this.style,'#90A8C8')" onmouseout="moutborder(this.style,'#075685')">Salir</SPAN>
+						&nbsp; &nbsp; <SPAN CLASS="ButtonTop" onclick="fOpenWindow('change_password.php','Change_Password','370','160')" onmouseover="overborder(this.style, '#90A8C8')" onmouseout="moutborder(this.style, '#075685')">Cambiar Contraseña</SPAN>
+						&nbsp; &nbsp; <SPAN CLASS="ButtonTop" onclick="helpWindow()" onmouseover="overborder(this.style, '#90A8C8')" onmouseout="moutborder(this.style, '#075685')"></SPAN>
+						</TD>
+	          		</form>
+        			</TR>
+      			</TABLE></TD>
+			  </TR>
+			  <TR>
+	    		<TD BGCOLOR="#90A8C8" HEIGHT="30" VALIGN=top><nobr>
+			  			<SPAN class=menu onClick="location.href='admin.php?id_aplicacion=1'" onMouseOver="over(this.style);showstatus('Stock');" onMouseOut="mout(this.style);hidestatus();">
+							<img src="images/360/reuse.gif" border=0 align=absmiddle >&nbsp;Stock
+						</SPAN>
+					</nobr><nobr>
+			  			<SPAN class=menu onClick="location.href='admin.php?id_aplicacion=2'" onMouseOver="over(this.style);showstatus('Ventas');" onMouseOut="mout(this.style);hidestatus();">
+							<img src="images/360/project_s.gif" border=0 align=absmiddle >&nbsp;Ventas
+						</SPAN>
+					</nobr><nobr>
+			  			<SPAN class=menu onClick="location.href='admin.php?id_aplicacion=3'" onMouseOver="over(this.style);showstatus('Embarque y Desembarque');" onMouseOut="mout(this.style);hidestatus();">
+							<img src="images/360/refresh.gif" border=0 align=absmiddle >&nbsp;Embarque y Desembarque
+						</SPAN>
+					</nobr><nobr>
+			  			<SPAN class=menu onClick="location.href='admin.php?id_aplicacion=4'" onMouseOver="over(this.style);showstatus('Usuarios');" onMouseOut="mout(this.style);hidestatus();">
+							<img src="images/360/group.gif" border=0 align=absmiddle >&nbsp;Usuarios
+						</SPAN>
+					</nobr><nobr>
+			  			<SPAN class=menu onClick="location.href='admin.php?id_aplicacion=5'" onMouseOver="over(this.style);showstatus('Módulos');" onMouseOut="mout(this.style);hidestatus();">
+							<img src="images/360/department.gif" border=0 align=absmiddle >&nbsp;Módulos
+						</SPAN>
+					</nobr><nobr>
+			  			<SPAN class=menu onClick="location.href='admin.php?id_aplicacion=6'" onMouseOver="over(this.style);showstatus('Administración');" onMouseOut="mout(this.style);hidestatus();">
+							<img src="images/360/admintools.gif" border=0 align=absmiddle >&nbsp;Administración
+						</SPAN>
+					</nobr><nobr>
+			  			<SPAN class=menu onClick="location.href='admin.php?id_aplicacion=7'" onMouseOver="over(this.style);showstatus('Reportes de Ventas');" onMouseOut="mout(this.style);hidestatus();">
+							<img src="images/360/report.gif" border=0 align=absmiddle >&nbsp;Reportes de Ventas
+						</SPAN>
+					</nobr><nobr>
+			  			<SPAN class=menu onClick="location.href='admin.php?id_aplicacion=61'" onMouseOver="over(this.style);showstatus('Historial');" onMouseOut="mout(this.style);hidestatus();">
+							<img src="images/360/report.gif" border=0 align=absmiddle >&nbsp;Historial
+						</SPAN>
+					</nobr>
+				</TD>
+			  </TR>
+			</TABLE>
+	 	   </TD>
+		  </TR>
+		</TABLE><TABLE CELLPADDING=0 CELLSPACING=0 >
+					  	<TR>
+			    <TD VALIGN="bottom" WIDTH="1%">
+					<TABLE CLASS="tabselected" CELLPADDING=3 CELLSPACING=0>
+        				<TR>
+	          				<TD nowrap><A HREF="embarque.php?id_aplicacion=3&id_subaplicacion=4" CLASS="tabtxtselected" onmouseover="status='Crear Manifiesto de Embarque';return true;" onmouseout="status='';">
+					<IMG SRC="images/360/workflowconfirm.gif" BORDER=0 HSPACE=2 ALIGN="absmiddle">Crear Manifiesto de Embarque     		</A></TD>
+	    	    		</TR>
+	      			</TABLE>
+				</TD>
+			    <TD VALIGN="bottom" WIDTH="1%">
+					<TABLE CLASS="tab" CELLPADDING=3 CELLSPACING=0>
+        				<TR>
+	          				<TD nowrap><A HREF="vembarque.php?id_aplicacion=3&id_subaplicacion=13" CLASS="tabtxt" onmouseover="status='Ver Manifiesto de Embarque';return true;" onmouseout="status='';">
+					<IMG SRC="images/360/workflowconfirm.gif" BORDER=0 HSPACE=2 ALIGN="absmiddle">Ver Manifiesto de Embarque     		</A></TD>
+	    	    		</TR>
+	      			</TABLE>
+				</TD>
+			    <TD VALIGN="bottom" WIDTH="1%">
+					<TABLE CLASS="tab" CELLPADDING=3 CELLSPACING=0>
+        				<TR>
+	          				<TD nowrap><A HREF="desembarque.php?id_aplicacion=3&id_subaplicacion=14" CLASS="tabtxt" onmouseover="status='Crear Manifiesto de Desembarque';return true;" onmouseout="status='';">
+					<IMG SRC="images/360/workflowconfirm.gif" BORDER=0 HSPACE=2 ALIGN="absmiddle">Crear Manifiesto de Desembarque     		</A></TD>
+	    	    		</TR>
+	      			</TABLE>
+				</TD>
+			    <TD VALIGN="bottom" WIDTH="1%">
+					<TABLE CLASS="tab" CELLPADDING=3 CELLSPACING=0>
+        				<TR>
+	          				<TD nowrap><A HREF="vdesembarque.php?id_aplicacion=3&id_subaplicacion=15" CLASS="tabtxt" onmouseover="status='Ver Manifiesto de Desembarque';return true;" onmouseout="status='';">
+					<IMG SRC="images/360/workflowconfirm.gif" BORDER=0 HSPACE=2 ALIGN="absmiddle">Ver Manifiesto de Desembarque     		</A></TD>
+	    	    		</TR>
+	      			</TABLE>
+				</TD><TD VALIGN="bottom" WIDTH="96%">
+				<TABLE CLASS="empty" CELLPADDING=3 CELLSPACING=0 WIDTH="100%">
+					<TR>
+						<TD nowrap><IMG SRC="images/360/spacer.gif" WIDTH="12" HEIGHT="20"><SPAN CLASS="tabtxt">&nbsp;</SPAN>
+					</TD></tr></table><td>  </TR>
+			  </TABLE><SCRIPT LANGUAGE="JavaScript">function printWindow() { window.open("printpage.php?page=http://localhost:9090/cargaIcaro/embarque_upd.php~id_aplicacion=3|id_subaplicacion=4|principal=embarque.php|id=102","Print","width=580,height=400,resizable=1,scrollbars=1,toolbar=0,menubar=0,location=0");}</SCRIPT><TABLE WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="3" CLASS="workarea">
+				  <TR>
+				    <TD>
+			<!--
+                        <a href="#" onclick="printWindow()">Vista de Impresión</a><a href="printpage.php">otro Print Preview</a>
+                        -->
+			<a href=admin.php?id_aplicacion=3>Embarque y Desembarque</a>&nbsp;&nbsp;--->&nbsp;&nbsp;<a href=embarque.php?id_aplicacion=3&id_subaplicacion=4>Crear Manifiesto de Embarque</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<HR NOSHADE SIZE=1 COLOR=#000000 CLASS=HRule>
+				       <table width=100%>
+    				    <tr>
+				          <td ><table border="0" width="100%">
+  <tr>
+    <td width="58%">
+
+  	<script language="javascript">
+	function valida()
+	{
+  	  define('tNro', 'string', 'Nro.',1,15,document);
+  	  define('tVuelo', 'string', 'Vuelo',1,20,document);
+  	  define('tFecha', 'date', 'Fecha',10,10,document);
+  	  define('sePor', 'string', 'Por',1,15,document);
+  	  define('seOrigen', 'string', 'Origen',1,7,document);
+  	  define('seDestino', 'string', 'Destino',1,7,document);
+  	}
+
+  	function vValidar()
+  	{
+  	  var res;
+  	  res=validate();
+  	  return(res);
+  	}
+
+  	function vValidarB(forma,urldestino)
+  	{
+  	  var res;
+  	  res=validate();
+  	  if(res)
+  	  {
+  	    cambiar_action(forma,urldestino);
+  	    forma.submit();
+  	  }
+  	}
+
+  	</script>
+  		<form action="embarque_upd1.php" method="post" name="form1">
+  		  			<TABLE WIDTH="100%" CELLSPACING=0 CELLPADDING=0 CLASS="homebox">
+			<TR><TD>
+					<table width="100%" border=0 cellspacing=0 cellpadding=0 CLASS="titletable">
+						<tr>
+							<td nowrap><SPAN class="title" STYLE="cursor:default;">
+								<img src="images/360/personwrite.gif" border=0 align=absmiddle HSPACE=2><font color="#FFFFFF">
+								Actualizar Manifiesto&nbsp;</font></SPAN>
+							</td>
+						</TR>
+					</TABLE>
+					<TABLE WIDTH="100%" CELLSPACING=0 CELLPADDING=0 CLASS="tableinside"><TR><TD><TABLE WIDTH='100%' border=0 CELLPADDING=2 CELLSPACING=1 BGCOLOR='#CCCCCC'>
+
+<TR BGCOLOR="#CCCCCC"><td nowrap class='table_hd'>* Nro</td><td nowrap class='table_hd'><input type="text" name="tNro" value="922" ></td></tr>
+
+<TR BGCOLOR="#CCCCCC"><td nowrap class='table_hd'>* Vuelo</td><td nowrap class='table_hd'><input type="text" name="tVuelo" value="922" ></td></tr>
+
+<TR BGCOLOR="#CCCCCC"><td nowrap class='table_hd'>* Fecha</td><td nowrap class='table_hd'><input type="text" name="tFecha" value="2006-10-02" ><a href="javascript:show_calendar('form1.tFecha');" onmouseover="window.status='Date Picker';return true;"> <img src="images/360/big_calendar.gif" width=24 height=24 border=0></a></td></tr>
+
+<TR BGCOLOR="#CCCCCC"><td nowrap class='table_hd'>* Por</td><td nowrap class='table_hd'><select name='sePor' ><option value='administrador' selected >Administrador</option><option value='jruiz'>Jenny Ruiz</option><option value='prueba'>Prueba</option><option value='usuario1'>Usuario 1</option><option value='usuario2'>Usuario 2</option><option value='usuario3'>Usuario 3</option></select></td></tr>
+
+<TR BGCOLOR="#CCCCCC"><td nowrap class='table_hd'>* Origen</td><td nowrap class='table_hd'><select name='seOrigen' ><option value='CUE'>Cuenca</option><option value='GYE'>GUAYAQUIL</option><option value='UIO' selected >QUITO</option></select></td></tr>
+
+<TR BGCOLOR="#CCCCCC"><td nowrap class='table_hd'>* Destino</td><td nowrap class='table_hd'><select name='seDestino' ><option value='CUE'>Cuenca</option><option value='GYE' selected >GUAYAQUIL</option><option value='UIO'>QUITO</option></select></td></tr>
+
+
+
+ </TABLE>
+
+</TABLE>
+
+</TABLE>
+
+<input type="hidden" name="id_aplicacion" value="3" >
+<input type="hidden" name="id_subaplicacion" value="4" >
+<input type="hidden" name="id" value="102" >
+<input type="hidden" name="principal" value="embarque.php" >
+<input type="hidden" name="campo_base" value="tNro|tVuelo|tFecha|sePor|seOrigen|seDestino" ><input type="hidden" name="campo_extra" value="id_aplicacion|id_subaplicacion|id|principal" >
+  	</td>
+  	<td width="42%">
+	<table border="0">
+	  <tr>
+	    <td>		  <div align="center">
+		    		    <!--
+	<input type="button" name="doc" value="Documentos por Manifiesto" onClick="fOpenWindow('docxmanemb.php?id_aplicacion=3&id_subaplicacion=4&principal=embarque.php&idp=102','DocxManEmb','450','550')">-->
+	<acronym title="Permite asignar los documentos (guías, facturas, etc.) que serán transportados en el Manifiesto de Embarque">
+          <a href="#" onClick="fOpenWindow('docxmanemb.php?id_aplicacion=3&id_subaplicacion=4&principal=embarque.php&idp=102','DocxManEmb','450','550')" >
+	    <img src="images/boton/docxman.gif" border="0">
+	  </a>
+	</acronym>
+		  </div></td>
+	  </tr>
+	  <tr>
+	    <td>
+	      <div align="center">
+		<!--<input type="button" name="bulto" value="::::: Bultos por Manifiesto :::::" onClick="fOpenWindow('bulxmanemb.php?id_aplicacion=3&id_subaplicacion=4&principal=embarque.php&idp=102','BulxManE','450','550')">-->
+	<acronym title="Permite gestionar los bultos (contenedores de carga) que se están cargando al Manifiesto de Embarque">
+          <a href="#" onClick="fOpenWindow('bulxmanemb.php?id_aplicacion=3&id_subaplicacion=4&principal=embarque.php&idp=102','BulxManE','450','550')" >
+	    <img src="images/boton/bulxman.gif" border="0">
+	  </a>
+	</acronym>
+		    </div></td>
+	  </tr>
+	  <tr>
+	    <td>
+		  <div align="center">
+		  <!--
+		    <input type="button" name="bultoBaja" value=" Bajar Bultos de Manifiesto" onClick="fOpenWindow('bulxmanembqueda.php?id_aplicacion=3&id_subaplicacion=4&principal=embarque.php&idp=102','BulxManE','450','550')">
+		  -->
+	<acronym title="Permite identificar los bultos que por motivos de vuelo no van a ser transportados">
+          <a href="#" onClick="fOpenWindow('bulxmanembqueda.php?id_aplicacion=3&id_subaplicacion=4&principal=embarque.php&idp=102','BulxManE','450','550'" >
+	    <img src="images/boton/bajabulxman.gif" border="0">
+	  </a>
+	</acronym>
+		    </div></td>
+	  </tr>
+	  <tr>
+	    <td>
+		  <div align="center">
+		    <!--<input type="button" name="bultoFin" value="Finalizar Manifiesto" onClick="self.location='bulxmanembreal.php?id_aplicacion=3&id_subaplicacion=4&principal=embarque.php&idp=102'">-->
+	<acronym title="Pºermite cerrar el manifiesto con el fin de no permitir más ingresos al mismo">
+          <a href="#" onClick="self.location='bulxmanembreal.php?id_aplicacion=3&id_subaplicacion=4&principal=embarque.php&idp=102'" >
+	    <img src="images/boton/bajabulxman.gif" border="0">
+	  </a>
+	</acronym>
+		    </div></td>
+	  </tr>
+	</table>
+
+	</td>
+  </tr>
+</table>
+
+  		  <!--<input type="submit" name="Upd" value="Actualizar" onClick="return vValidar();">-->
+
+  		  <!--<input type="button" name="AddB" value="A&ntilde;adirB" onClick="return vValidarB(document.form1,'embarque_upd1.php');">-->
+  		  <input type="button" name="Cancel" value="Regresar" onClick="self.location='embarque.php?id_aplicacion=3&id_subaplicacion=4'">
+		</form>
+<p>
+  Nota: <br>
+<ul>
+  <li>El botón <strong>"Documentos por Manifiesto"</strong> permite asignar los documentos (guías, facturas, etc.) que serán transportados en el Manifiesto de Embarque</li>
+  <li>El bot&oacute;n <strong>&quot;Bultos por Manifiesto&quot;</strong> permite gestionar los bultos (contenedores de carga) que se est&aacute;n cargando al Manifiesto de Embarque </li>
+  <li>El bot&oacute;n <strong>&quot;Bajar Bultos de Manifiesto&quot;</strong> permite identificar los bultos que por motivos de vuelo no van a ser transportados</li>
+  <li>El bot&oacute;n <strong>&quot;Finalizar Manifiesto&quot;</strong> permite cerrar el manifiesto con el fin de no permitir m&aacute;s ingresos al mismo </li>
+</ul>
+</p>	</td>
+        				</tr>
+				      </table>
+
+			    	</TD>
+				  </TR>
+			  </TABLE>
+			</body>
+		  </html>
+
